@@ -36,7 +36,7 @@ const ContactLegitimate = () => {
             Ready to hire legally and confidently in
             <span className="text-secondary px-2 font-bold">Romania</span>,
             <span className="text-secondary font-bold">Malta</span>, or
-            <span className="text-secondary px-2 font-bold">Sharjah</span>?
+            <span className="text-secondary pl-2 font-bold">Sharjah</span>?
             <br />
             Our team is ready to guide you through the process and answer all
             your questions.

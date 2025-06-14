@@ -7,7 +7,7 @@ import {
   FaInstagram,
   FaYoutube,
 } from "react-icons/fa";
-
+import lovemonday from "/lovemonday.png?url"
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white pt-16 pb-8">
@@ -17,10 +17,7 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="flex flex-col items-center lg:items-start">
             <div className="text-3xl font-bold mb-4">
-              <span className="text-secondary font-lobster tracking-widest">
-                Love
-              </span>
-              <span className="text-primary font-lobster tracking-widest"> Monday</span>
+              <img src={lovemonday} alt="" className="h-20"/>
             </div>
             <p className="text-gray-400 text-center lg:text-left mb-6">
               Your trusted international staffing agency connecting talent with
