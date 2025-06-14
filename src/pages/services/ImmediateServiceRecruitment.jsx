@@ -90,12 +90,10 @@ const ImmediateServiceRecruitment = () => {
           >
             <p className="text-lg text-gray-700">
               Our team manages every step on your behalf, ensuring{" "}
-              <span className="font-semibold text-indigo-600">
+              <span className="font-semibold text-primary">
                 legal compliance
               </span>
-              ,{" "}
-              <span className="font-semibold text-orange-500">efficiency</span>,
-              and{" "}
+              , <span className="font-semibold text-sec">efficiency</span>, and{" "}
               <span className="font-semibold text-green-500">
                 peace of mind
               </span>

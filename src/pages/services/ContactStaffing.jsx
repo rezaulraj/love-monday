@@ -23,7 +23,7 @@ const ContactStaffing = () => {
           viewport={{ once: true }}
           className="max-w-2xl mx-auto text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-merriweather tracking-wider">
             Contact Us
           </h2>
 

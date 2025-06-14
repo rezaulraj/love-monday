@@ -65,7 +65,7 @@ const OurRoles = () => {
           </h2>
           <p className="text-xl text-gray-600 font-lato">
             At{" "}
-            <span className="font-semibold text-secondary font-lobster tracking-widest">
+            <span className="font-semibold text-secondary font-merriweather tracking-wider">
               Love Monday
             </span>
             , we are committed to transparent, ethical, and compliant
@@ -89,7 +89,7 @@ const OurRoles = () => {
                   <FaShieldAlt className="text-indigo-600 text-xl" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2 font-merriweather tracking-wider">
                     Verification & Accreditation
                   </h3>
                   <p className="text-gray-700">
@@ -116,7 +116,7 @@ const OurRoles = () => {
             </div>
 
             <div className="bg-indigo-50 p-6 rounded-xl border border-indigo-100 font-lato">
-              <h3 className="text-lg font-semibold text-indigo-800 mb-3">
+              <h3 className="text-lg font-semibold text-indigo-800 mb-3 font-merriweather tracking-wider">
                 For official verification:
               </h3>
               <ul className="space-y-2 text-gray-700">
@@ -146,7 +146,7 @@ const OurRoles = () => {
               viewport={{ once: true }}
             >
               <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 mb-8 font-lato">
-                <h3 className="text-2xl font-bold text-gray-800 mb-6">
+                <h3 className="text-2xl font-bold text-gray-800 mb-6 font-merriweather tracking-wider">
                   Complete{" "}
                   <span className="text-indigo-600">Recruitment Support</span>
                 </h3>
@@ -174,7 +174,7 @@ const OurRoles = () => {
                       <div className="flex items-start space-x-3">
                         <div className="mt-1">{service.icon}</div>
                         <div>
-                          <h4 className="font-semibold text-gray-800">
+                          <h4 className="font-semibold text-gray-800 font-merriweather tracking-wider">
                             {service.title}
                           </h4>
                           <p className="text-gray-600 text-sm">
@@ -187,8 +187,8 @@ const OurRoles = () => {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-r from-indigo-600 to-blue-600 p-6 rounded-xl text-white font-lato">
-                <h3 className="text-xl font-semibold mb-3 flex items-center">
+              <div className="bg-gradient-to-r from-primary to-blue-500 p-6 rounded-xl text-white font-lato">
+                <h3 className="text-xl font-semibold mb-3 flex items-center font-merriweather tracking-wider">
                   <FaGlobe className="mr-2" />
                   Industry Leadership
                 </h3>

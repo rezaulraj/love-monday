@@ -39,7 +39,7 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 font-merriweather tracking-wider">
             Contact <span className="text-blue-600">Section</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -63,7 +63,7 @@ const Contact = () => {
                 <FiMail className="text-blue-600 text-xl" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-1">
+                <h3 className="text-lg font-semibold text-gray-800 mb-1 font-merriweather tracking-wider">
                   Email
                 </h3>
                 <a
@@ -80,7 +80,7 @@ const Contact = () => {
                 <FiMapPin className="text-blue-600 text-xl" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">
+                <h3 className="text-lg font-semibold text-gray-800 mb-4 font-merriweather tracking-wider">
                   Our Offices
                 </h3>
                 <div className="space-y-6">
@@ -89,7 +89,7 @@ const Contact = () => {
                       key={index}
                       className="border-l-2 border-blue-200 pl-4"
                     >
-                      <h4 className="font-medium text-gray-800">
+                      <h4 className="font-medium text-gray-800 font-merriweather tracking-wider">
                         {location.title}
                       </h4>
                       <p className="text-gray-600 mt-1">{location.address}</p>
@@ -124,7 +124,7 @@ const Contact = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/10 via-transparent to-transparent pointer-events-none"></div>
                 </div>
                 <div className="bg-white p-4">
-                  <h4 className="font-semibold text-gray-800">
+                  <h4 className="font-semibold text-gray-800 font-merriweather tracking-wider">
                     {location.title}
                   </h4>
                   <p className="text-sm text-gray-600">{location.address}</p>

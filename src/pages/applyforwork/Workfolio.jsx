@@ -46,11 +46,11 @@ const Workfolio = () => {
           <motion.div variants={textVariants} className="order-1 lg:order-1">
             <motion.h2
               variants={textVariants}
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 leading-tight"
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 leading-tight font-merriweather tracking-wider"
             >
-              Apply to Work in <span className="text-blue-600">Romania</span>,{" "}
+              Apply to Work in <span className="text-primary">Romania</span>,{" "}
               <span className="text-yellow-500">Malta</span>, or{" "}
-              <span className="text-red-500">Sharjah</span>
+              <span className="text-secondary">Sharjah</span>
             </motion.h2>
 
             <motion.p

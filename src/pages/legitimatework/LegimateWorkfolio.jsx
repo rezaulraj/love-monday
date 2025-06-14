@@ -124,7 +124,7 @@ const LegitimateWorkfolio = () => {
               viewport={{ once: true }}
             >
               <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 mb-8 font-lato">
-                <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center font-merriweather tracking-wider">
                   <FaUserShield className="text-indigo-600 mr-3" />
                   Employer Accreditation
                 </h3>
@@ -149,7 +149,7 @@ const LegitimateWorkfolio = () => {
                           {service.icon}
                         </div>
                         <div>
-                          <h4 className="font-semibold text-gray-800">
+                          <h4 className="font-semibold text-gray-800 font-merriweather tracking-wider">
                             {service.title}
                           </h4>
                           <p className="text-gray-600 text-sm">

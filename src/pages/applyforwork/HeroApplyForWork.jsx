@@ -52,7 +52,7 @@ const HeroApplyForWork = () => {
 
             <motion.h1
               variants={itemVariants}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight " 
             >
               <span className="text-blue-400">Build Your Future</span>
               <br />

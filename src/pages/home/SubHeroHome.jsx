@@ -31,26 +31,26 @@ const SubHeroHome = () => {
           </div>
 
           {/* Headline */}
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 ">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 font-merriweather tracking-wider leading-relaxed">
             <span className="text-secondary font-merriweather tracking-wider">
               Love
             </span>{" "}
-            <span className="text-primary"> Monday</span> is your trusted
-            international staffing agency
+            <span className="text-primary"> Monday</span> Is Your Trusted
+            International Staffing Agency
           </h2>
 
           {/* Main paragraph */}
           <p className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
             Connecting companies in{" "}
-            <span className="font-medium text-indigo-500 font-merriweather tracking-wider">
+            <span className="font-medium text-primary font-merriweather tracking-wider">
               Romania
             </span>
             ,{" "}
-            <span className="font-medium text-indigo-500 font-merriweather tracking-wider">
+            <span className="font-medium text-primary font-merriweather tracking-wider">
               Malta
             </span>
             , and{" "}
-            <span className="font-medium text-indigo-500 font-merriweather tracking-wider">
+            <span className="font-medium text-primary font-merriweather tracking-wider">
               Sharjah
             </span>{" "}
             with highly skilled workers.
@@ -60,15 +60,13 @@ const SubHeroHome = () => {
           <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 max-w-2xl mx-auto">
             <p className="text-gray-700 italic font-light">
               "We don't just fill positions, we support your growth with{" "}
-              <span className="font-medium text-orange-500">
-                ethical hiring
-              </span>
+              <span className="font-medium text-secondary">ethical hiring</span>
               ,{" "}
-              <span className="font-medium text-orange-500">
+              <span className="font-medium text-secondary">
                 smooth processes
               </span>
               , and{" "}
-              <span className="font-medium text-orange-500">
+              <span className="font-medium text-secondary">
                 exceptional service
               </span>{" "}
               from start to finish."
@@ -98,7 +96,7 @@ const SubHeroHome = () => {
                 key={index}
                 className="bg-white p-6 rounded-lg shadow-xs hover:shadow-sm transition-shadow"
               >
-                <p className="text-3xl font-bold text-indigo-600 mb-2 font-merriweather tracking-wider">
+                <p className="text-3xl font-bold text-primary mb-2 font-merriweather tracking-wider">
                   {item.value}
                 </p>
                 <h3 className="text-lg font-semibold text-gray-800 mb-1 font-merriweather tracking-wider">

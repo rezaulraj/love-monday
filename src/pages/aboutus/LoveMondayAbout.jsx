@@ -59,7 +59,7 @@ const LoveMondayAbout = () => {
           <motion.div variants={itemVariants} className="order-1 lg:order-1">
             <motion.h2
               variants={itemVariants}
-              className="text-3xl md:text-4xl font-bold text-gray-800 mb-6"
+              className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 font-merriweather tracking-wider"
             >
               About
               <span className="text-blue-600">
@@ -116,7 +116,7 @@ const LoveMondayAbout = () => {
           <motion.div variants={itemVariants} className="order-1 lg:order-2">
             <motion.h2
               variants={itemVariants}
-              className="text-3xl md:text-4xl font-bold text-gray-800 mb-6"
+              className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 font-merriweather tracking-wider"
             >
               About the Name{" "}
               <span className="text-blue-600">

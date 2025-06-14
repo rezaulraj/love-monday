@@ -108,9 +108,9 @@ const MeetTeam = () => {
           variants={titleVariants}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 relative inline-block font-lato">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 relative inline-block font-merriweather tracking-wider">
             <span className="relative">
-              Meet the{" "}
+              Meet The{" "}
               <span className="text-secondary font-merriweather tracking-wider">
                 Love
               </span>{" "}

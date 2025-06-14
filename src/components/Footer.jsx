@@ -7,7 +7,7 @@ import {
   FaInstagram,
   FaYoutube,
 } from "react-icons/fa";
-import lovemonday from "/lovemonday.png?url"
+import lovemonday from "/lovemonday.png?url";
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white pt-16 pb-8">
@@ -17,7 +17,7 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="flex flex-col items-center lg:items-start">
             <div className="text-3xl font-bold mb-4">
-              <img src={lovemonday} alt="" className="h-20"/>
+              <img src={lovemonday} alt="" className="h-20" />
             </div>
             <p className="text-gray-400 text-center lg:text-left mb-6">
               Your trusted international staffing agency connecting talent with
@@ -53,16 +53,18 @@ const Footer = () => {
 
           {/* Contact Information */}
           <div className="space-y-6">
-            <h3 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
+            <h3 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2 font-merriweather tracking-wider ">
               Contact Info
             </h3>
             <div className="flex items-start space-x-4">
               <FaEnvelope className="text-orange-500 mt-1" />
               <div>
-                <p className="text-gray-400">Email:</p>
+                <p className="text-gray-400 font-merriweather tracking-wider">
+                  Email:
+                </p>
                 <a
                   href="mailto:xhaferi@lovemonday.agency"
-                  className="hover:text-orange-400 transition-colors"
+                  className="hover:text-orange-400 transition-colors font-lato"
                 >
                   xhaferi@lovemonday.agency
                 </a>
@@ -71,8 +73,10 @@ const Footer = () => {
             <div className="flex items-start space-x-4">
               <FaMapMarkerAlt className="text-orange-500 mt-1" />
               <div>
-                <p className="text-gray-400">Address:</p>
-                <p>
+                <p className="text-gray-400 font-merriweather tracking-wider">
+                  Address:
+                </p>
+                <p className="font-lato tracking-wide">
                   HQ Romania: Municipiul Târgovişte, Strada AVRAM IANCU, Nr. 8,
                   Bloc 35, Ap. 50, Judet Dâmboviţa.
                 </p>
@@ -104,7 +108,14 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="border-t border-gray-800 pt-8 text-center text-gray-500">
-          <p>© {new Date().getFullYear()} Love Monday. All rights reserved.</p>
+          <p className="font-lato">
+            © {new Date().getFullYear()}{" "}
+            <span className="text-secondary font-merriweather tracking-wider font-semibold">
+              Love{" "}
+            </span>{" "}
+            <span className="text-primary font-semibold font-lato">Monday</span>
+            . All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
