@@ -1,0 +1,93 @@
+{
+  "navItems": {
+    "home": "Home",
+    "services": {
+      "serviceroot": "Services",
+      "service1": "Recruitment Assistance",
+      "service2": "Workforce Staffing"
+    },
+    "legitimate-work": "Legitimate Work",
+    "about-us": "About Us",
+    "contact-us": "Contact Us",
+    "apply-for-work": "Apply For Work",
+    "language": "Language"
+  },
+  "homePage": {
+    "herotexth": "Find Your Dream Career With Us",
+    "herotextsub": "Reliable, transparent, and safe process of hiring reliable workers",
+    "contact-us": "Contact Us",
+    "secondhero": " Is Your Trusted International Staffing Agency",
+    "secondp1": "Connecting companies in ",
+    "romania": "Romania",
+    "malta": "Malta",
+    "and": "and",
+    "sharjah": "Sharjah",
+    "secondp2": "with highly skilled workers.",
+    "secondnote1": "We don't just fill positions, we support your growth with ",
+    "importnote1": "ethical hiring",
+    "importnote2": "smooth processes",
+    "importnote3": "exceptional service",
+    "importnote4": "from start to finish.",
+    "text3": "3+",
+    "texth1": "Countries Served",
+    "textp1": "Romania, Malta, Sharjah",
+
+    "texteh": "Ethical",
+    "texth2": "Focus Area",
+    "textp2": "Responsible hiring practices",
+
+    "texted": "End-to-End",
+    "texth3": "Service",
+    "textp3": "From recruitment to onboarding",
+    "whychose": "Why Choose ",
+
+    "fliph1": "PROVEN TRACK RECORD",
+    "hover1": "hover to learn more",
+    "text1": "With years of expertise in ethical international recruitment, Love Monday has built strong partnerships with companies across various industries, successfully connecting skilled workers with employers across borders.",
+    "fliph2": "RELIABILITY",
+    "hover2": "hover to learn more",
+    "text2": "Our professionals are recognized globally for their reliability, adaptability, and dedication making them an excellent fit for dynamic industries and expanding teams.",
+    "fliph3": "EXPERTISE",
+    "hover3": "hover to learn more",
+    "text3": "We manage the full recruitment journey from initial consultation to final placement and provide ongoing integration support to ensure smooth adaptation for both employer and employee.",
+
+    "imapact1": "Our ",
+    "imapact2": "Impact ",
+    "imapact3": "in Numbers",
+    "impactp": "Quantifying our success through measurable achievements and satisfied partners",
+    "statch1": "Thousands of Successfully Employed Workers",
+    "statchp1": "Our proven track record speaks for itself with thousands of happy employees placed internationally.",
+    "statch2": "Hundreds of Trusted Business Clients",
+    "statchp2": "We've built long-term partnerships with companies across multiple industries.",
+    "statch3": "A Vast Talent Pool of Pre-Screened Candidates",
+    "statchp3": "Access to rigorously vetted professionals ready to join your team.",
+    "statch4": "Years of Proven Experience in International Recruitment",
+    "statchp4": "Deep expertise navigating global employment markets and regulations.",
+
+    "statnote1": "At ",
+    "statnote2": "we're proud of the ",
+    "statnote3": "long-term partnerships ",
+    "statnote4": "we've built by consistently delivering ",
+    "statnote5": "quality talent ",
+    "statnote6": "and ",
+    "statnote7": "compliant hiring solutions ",
+    "statnote8": "across borders.",
+
+    "statbtn": "Discover Our Recruitment Process",
+
+    "conpilance": "Compliance ",
+    "andc": "&",
+    "partners": "Partnerships",
+    "cpp1": "We adhere strictly to all legal requirements and collaborate closely with accredited institutions in your country to ensure a ",
+    "cpp2": "smooth",
+    "cpp3": "transparent",
+    "cpp4": " and ",
+    "cpp5": "compliant ",
+    "cpp6": "recruitment process.",
+    "cpt": "Trusted by institutions worldwide",
+
+    "contact": "Contact Us",
+    "contactp": "Let's build your workforce the right way.",
+    "contactbtn": "Send an Inquiry"
+  }
+}
