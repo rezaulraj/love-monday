@@ -57,12 +57,12 @@ const OurRoles = () => {
           className="max-w-4xl mx-auto text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 font-merriweather tracking-wider">
-            <span className="text-indigo-600">Recruitment Assurance</span> and
+            <span className="text-primary">Recruitment Assurance</span> and
             Our Role
           </h2>
           <p className="text-xl text-gray-600 font-lato">
             At{" "}
-            <span className="font-semibold text-indigo-600">Love Monday</span>,
+            <span className="font-semibold text-secondary font-lobster tracking-widest">Love Monday</span>,
             we are committed to transparent, ethical, and compliant recruitment
             for Romania, Malta, and Sharjah.
           </p>
@@ -210,7 +210,7 @@ const OurRoles = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <button className="px-8 py-3 bg-gradient-to-r from-orange-500 to-amber-500 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+          <button className="px-8 py-3 bg-gradient-to-r from-secondary to-amber-500 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
             Contact Our Compliance Team
           </button>
         </motion.div>

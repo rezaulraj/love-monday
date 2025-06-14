@@ -11,12 +11,12 @@ import {
 const StaffingSolution = () => {
   const benefits = [
     {
-      icon: <FaBriefcase className="text-2xl text-indigo-600" />,
+      icon: <FaBriefcase className="text-2xl text-primary" />,
       title: "Flexible Staffing",
       description: "Minimum 6-month placements in Romania, Malta, and Sharjah",
     },
     {
-      icon: <FaFileContract className="text-2xl text-orange-500" />,
+      icon: <FaFileContract className="text-2xl text-secondary" />,
       title: "Legal Compliance",
       description: "Workers employed by us, seconded to you under agreement",
     },
@@ -49,7 +49,7 @@ const StaffingSolution = () => {
           className="text-center mb-16 max-w-4xl mx-auto"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 font-merriweather tracking-wider">
-            <span className="text-indigo-600">Staffing</span> Solutions
+            <span className="text-primary">Staffing</span> Solutions
           </h2>
           <p className="text-xl text-gray-600 mb-6">
             We offer flexible staffing options for employers in Romania, Malta,
@@ -71,7 +71,7 @@ const StaffingSolution = () => {
             <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 mb-8">
               <p className="text-gray-700 mb-6">
                 In this arrangement, workers are formally employed by{" "}
-                <span className="font-semibold text-indigo-600">
+                <span className="font-semibold text-primary">
                   <span className="text-secondary font-lobster tracking-widest">
                     Love
                   </span>{" "}

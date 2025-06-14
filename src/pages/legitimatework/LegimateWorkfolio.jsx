@@ -55,12 +55,12 @@ const LegitimateWorkfolio = () => {
           className="max-w-4xl mx-auto text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 font-merriweather tracking-wider">
-            <span className="text-indigo-600">Legitimate</span> Work
+            <span className="text-primary">Legitimate</span> Work
           </h2>
           <p className="text-xl text-gray-600 mb-6 font-lato">
             In a recruitment industry where shortcuts and non-compliant
             practices still exist,
-            <span className="font-semibold text-indigo-600">
+            <span className="font-semibold text-secondary">
               <span className="text-secondary font-lobster tracking-widest pl-1">
                 Love
               </span>{" "}

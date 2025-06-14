@@ -30,7 +30,7 @@ const HeroStaffing = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.8 }}
             >
-              <span className="text-orange-400">Workforce</span> Staffing
+              <span className="text-secondary">Workforce</span> Staffing
               Solutions
             </motion.h1>
 
@@ -50,7 +50,7 @@ const HeroStaffing = () => {
               transition={{ delay: 0.6, duration: 0.8 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <button className="px-8 py-3 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl">
+              <button className="px-8 py-3 bg-secondary hover:bg-secondary/70 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl">
                 Request Staffing Support
               </button>
               <button className="px-8 py-3 bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 font-medium rounded-full transition-all duration-300">

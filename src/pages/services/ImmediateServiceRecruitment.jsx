@@ -12,11 +12,11 @@ import {
 const ImmediateServiceRecruitment = () => {
   const services = [
     {
-      icon: <FaUserTie className="text-orange-500" />,
+      icon: <FaUserTie className="text-secondary" />,
       text: "Workforce needs analysis tailored to your business goals",
     },
     {
-      icon: <FaFileAlt className="text-indigo-500" />,
+      icon: <FaFileAlt className="text-primary" />,
       text: "Client accreditation with relevant regulatory bodies",
     },
     {
@@ -32,7 +32,7 @@ const ImmediateServiceRecruitment = () => {
       text: "Presentation of shortlisted candidates to your team",
     },
     {
-      icon: <FaFileAlt className="text-indigo-500" />,
+      icon: <FaFileAlt className="text-primary/90" />,
       text: "Full documentation support for work and residency permits",
     },
     {
@@ -68,7 +68,7 @@ const ImmediateServiceRecruitment = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 font-merriweather tracking-wider">
-            <span className="text-indigo-600">Intermediary</span> Services
+            <span className="text-primary">Intermediary</span> Services
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             We offer full-scale intermediary support to ensure a smooth and
@@ -126,7 +126,7 @@ const ImmediateServiceRecruitment = () => {
           viewport={{ once: true }}
           className="mt-16 text-center"
         >
-          <button className="px-8 py-3 bg-gradient-to-r from-indigo-600 to-blue-500 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+          <button className="px-8 py-3 bg-gradient-to-r from-secondary to-blue-500 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
             Request a Consultation
           </button>
         </motion.div>

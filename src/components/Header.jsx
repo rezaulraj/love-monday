@@ -14,7 +14,7 @@ import {
 } from "react-icons/fi";
 import { FaUserTie, FaUsers } from "react-icons/fa";
 import ReactCountryFlag from "react-country-flag";
-
+import lovemonday from "/lovemonday.png?url"
 const Header = () => {
   const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -86,7 +86,7 @@ const Header = () => {
               href="/"
               className="text-2xl font-bold text-primary font-lobster tracking-widest"
             >
-              <span className="text-secondary">Love</span> Monday
+              <img src={lovemonday} alt="Love Monday Logo" className="h-12" />
             </a>
           </div>
 

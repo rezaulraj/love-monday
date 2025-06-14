@@ -29,7 +29,7 @@ const HeroRecruitment = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            <span className="text-orange-400">Exceptional</span> Recruitment
+            <span className="text-secondary">Exceptional</span> Recruitment
             Assistance
           </motion.h1>
 
@@ -48,7 +48,7 @@ const HeroRecruitment = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            <button className="px-8 py-3 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl">
+            <button className="px-8 py-3 bg-secondary hover:bg-secondary/80 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl">
               Explore Our Services
             </button>
           </motion.div>

@@ -29,7 +29,7 @@ const HeroLegitimateWork = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.8 }}
             >
-              <span className="text-orange-400">Legitimate</span> Work
+              <span className="text-secondary">Legitimate</span> Work
               Opportunities
             </motion.h1>
 
@@ -49,7 +49,7 @@ const HeroLegitimateWork = () => {
               transition={{ delay: 0.6, duration: 0.8 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <button className="px-8 py-3 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl">
+              <button className="px-8 py-3 bg-secondary hover:bg-secondary/90 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl">
                 Explore Work Opportunities
               </button>
               <button className="px-8 py-3 bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 font-medium rounded-full transition-all duration-300">
