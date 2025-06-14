@@ -45,7 +45,7 @@ const HeroApplyForWork = () => {
         >
           <div className="max-w-2xl">
             <motion.div variants={itemVariants}>
-              <span className="inline-block px-4 py-1.5 mb-4 text-sm font-semibold text-white bg-blue-600 rounded-full shadow-lg">
+              <span className="inline-block px-4 py-1.5 mb-4 text-sm font-semibold text-white bg-secondary rounded-full shadow-lg">
                 Career Opportunities
               </span>
             </motion.div>
@@ -72,7 +72,13 @@ const HeroApplyForWork = () => {
               variants={itemVariants}
               className="flex flex-wrap gap-4"
             >
-              <button className="px-8 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center">
+              <button
+                onClick={() => {
+                  const section = document.querySelector("#apply-work");
+                  section?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="px-8 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center cursor-pointer"
+              >
                 <svg
                   className="w-5 h-5 mr-2"
                   fill="none"
@@ -88,7 +94,13 @@ const HeroApplyForWork = () => {
                 </svg>
                 Apply Now
               </button>
-              {/* <button className="px-8 py-3.5 bg-transparent hover:bg-white/10 text-white font-medium border-2 border-white rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center">
+              <button
+                onClick={() => {
+                  const section = document.querySelector("#work-info");
+                  section?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="px-8 py-3.5 bg-transparent hover:bg-white/10 text-white font-medium border-2 border-white rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center cursor-pointer"
+              >
                 <svg
                   className="w-5 h-5 mr-2"
                   fill="none"
@@ -102,8 +114,8 @@ const HeroApplyForWork = () => {
                     d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
                   />
                 </svg>
-                View Open Positions
-              </button> */}
+                Learn More
+              </button>
             </motion.div>
           </div>
         </motion.div>

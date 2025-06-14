@@ -48,7 +48,13 @@ const HeroRecruitment = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            <button className="px-8 py-3 bg-secondary hover:bg-secondary/80 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl">
+            <button
+              onClick={() => {
+                const section = document.querySelector("#immediate-service");
+                section?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="px-8 py-3 bg-secondary hover:bg-secondary/80 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer"
+            >
               Explore Our Services
             </button>
           </motion.div>

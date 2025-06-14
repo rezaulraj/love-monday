@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import {
   FiChevronDown,
@@ -14,12 +14,15 @@ import {
 } from "react-icons/fi";
 import { FaUserTie, FaUsers } from "react-icons/fa";
 import ReactCountryFlag from "react-country-flag";
-import lovemonday from "/lovemonday.png?url"
+import { useLocation } from "react-router-dom";
+import lovemonday from "/lovemonday.png?url";
+
 const Header = () => {
   const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState(null);
   const [isLangOpen, setIsLangOpen] = useState(false);
+  const location = useLocation();
 
   const languages = [
     { code: "en", name: "English", country: "US" },
@@ -52,7 +55,7 @@ const Header = () => {
     },
     {
       label: t("about Us"),
-      path: "about-us",
+      path: "/about-us",
       icon: <FiInfo className="mr-2" />,
     },
     {
@@ -66,6 +69,17 @@ const Header = () => {
       icon: <FiUser className="mr-2" />,
     },
   ];
+
+  // Check if a nav item is active
+  const isActive = (path) => {
+    return location.pathname === path;
+  };
+
+  // Check if any subnav item is active
+  const isSubmenuActive = (subNav) => {
+    if (!subNav) return false;
+    return subNav.some((item) => isActive(item.path));
+  };
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -86,7 +100,7 @@ const Header = () => {
               href="/"
               className="text-2xl font-bold text-primary font-lobster tracking-widest"
             >
-              <img src={lovemonday} alt="Love Monday Logo" className="h-12" />
+              <img src={lovemonday} alt="Love Monday Logo" className="h-12 hover:scale-105 transition-transform duration-500" />
             </a>
           </div>
 
@@ -102,7 +116,13 @@ const Header = () => {
                 >
                   {item.subNav ? (
                     <>
-                      <div className="flex items-center text-gray-700 hover:text-indigo-600 transition-colors cursor-pointer uppercase text-sm font-lato font-semibold tracking-wide">
+                      <div
+                        className={`flex items-center ${
+                          isSubmenuActive(item.subNav)
+                            ? "text-secondary"
+                            : "text-gray-700"
+                        } hover:text-secondary transition-colors cursor-pointer uppercase text-sm font-lato font-semibold tracking-wide`}
+                      >
                         {item.icon}
                         {item.label}
                         <FiChevronDown
@@ -122,7 +142,11 @@ const Header = () => {
                           <li key={subIndex}>
                             <a
                               href={subItem.path}
-                              className="flex items-center px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors uppercase text-sm"
+                              className={`flex items-center px-4 py-2 ${
+                                isActive(subItem.path)
+                                  ? "bg-indigo-50 text-secondary"
+                                  : "text-gray-700"
+                              } hover:bg-indigo-50 hover:text-secondary transition-colors uppercase text-sm`}
                             >
                               {subItem.icon}
                               {subItem.label}
@@ -134,7 +158,9 @@ const Header = () => {
                   ) : (
                     <a
                       href={item.path}
-                      className="flex items-center text-gray-700 hover:text-indigo-600 transition-colors uppercase text-sm font-lato font-semibold tracking-wide"
+                      className={`flex items-center ${
+                        isActive(item.path) ? "text-secondary" : "text-gray-700"
+                      } hover:text-secondary transition-colors uppercase text-sm font-lato font-semibold tracking-wide`}
                     >
                       {item.icon}
                       {item.label}
@@ -221,7 +247,11 @@ const Header = () => {
                   {item.subNav ? (
                     <>
                       <div
-                        className="flex items-center justify-between w-full py-2 text-gray-700 cursor-pointer hover:bg-gray-100 px-3 rounded-lg transition-colors"
+                        className={`flex items-center justify-between w-full py-2 ${
+                          isSubmenuActive(item.subNav)
+                            ? "text-secondary"
+                            : "text-gray-700"
+                        } cursor-pointer hover:bg-gray-100 px-3 rounded-lg transition-colors`}
                         onClick={() =>
                           setActiveSubmenu(
                             activeSubmenu === index ? null : index
@@ -244,7 +274,11 @@ const Header = () => {
                             <li key={subIndex}>
                               <a
                                 href={subItem.path}
-                                className="flex items-center py-1.5 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 px-3 rounded-lg transition-colors"
+                                className={`flex items-center py-1.5 ${
+                                  isActive(subItem.path)
+                                    ? "text-secondary bg-indigo-50"
+                                    : "text-gray-600"
+                                } hover:text-secondary hover:bg-gray-50 px-3 rounded-lg transition-colors`}
                               >
                                 {subItem.icon}
                                 {subItem.label}
@@ -257,7 +291,11 @@ const Header = () => {
                   ) : (
                     <a
                       href={item.path}
-                      className="flex items-center py-2 px-3 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
+                      className={`flex items-center py-2 px-3 rounded-lg ${
+                        isActive(item.path)
+                          ? "text-secondary bg-indigo-50"
+                          : "text-gray-700"
+                      } hover:bg-gray-100 transition-colors`}
                     >
                       {item.icon}
                       {item.label}

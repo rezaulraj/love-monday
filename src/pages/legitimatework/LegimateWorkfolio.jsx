@@ -44,7 +44,7 @@ const LegitimateWorkfolio = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section id="learn-our-process" className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4">
         {/* Header Section */}
         <motion.div
@@ -61,7 +61,7 @@ const LegitimateWorkfolio = () => {
             In a recruitment industry where shortcuts and non-compliant
             practices still exist,
             <span className="font-semibold text-secondary">
-              <span className="text-secondary font-lobster tracking-widest pl-1">
+              <span className="text-secondary font-merriweather tracking-wider pl-1">
                 Love
               </span>{" "}
               <span className="text-primary"> Monday</span>

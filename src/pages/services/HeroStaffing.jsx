@@ -50,10 +50,22 @@ const HeroStaffing = () => {
               transition={{ delay: 0.6, duration: 0.8 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <button className="px-8 py-3 bg-secondary hover:bg-secondary/70 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl">
+              <button
+                onClick={() => {
+                  const section = document.querySelector("#work-force-contact");
+                  section?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="px-8 py-3 bg-secondary hover:bg-secondary/70 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
                 Request Staffing Support
               </button>
-              <button className="px-8 py-3 bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 font-medium rounded-full transition-all duration-300">
+              <button
+                onClick={() => {
+                  const section = document.querySelector("#staffing-solution");
+                  section?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="px-8 py-3 bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 font-medium rounded-full transition-all duration-300"
+              >
                 Learn More
               </button>
             </motion.div>

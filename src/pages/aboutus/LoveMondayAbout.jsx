@@ -46,7 +46,7 @@ const LoveMondayAbout = () => {
   };
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="love-monday-about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* First Section: About Love Monday */}
         <motion.div
@@ -63,7 +63,7 @@ const LoveMondayAbout = () => {
             >
               About
               <span className="text-blue-600">
-                <span className="text-secondary font-lobster tracking-widest pl-4">
+                <span className="text-secondary font-merriweather tracking-wider pl-4">
                   Love
                 </span>
                 <span className="text-primary"> Monday</span>
@@ -121,7 +121,7 @@ const LoveMondayAbout = () => {
               About the Name{" "}
               <span className="text-blue-600">
                 "
-                <span className="text-secondary font-lobster tracking-widest pl-1">
+                <span className="text-secondary font-merriweather tracking-wider pl-1">
                   Love
                 </span>
                 <span className="text-primary"> Monday</span>"

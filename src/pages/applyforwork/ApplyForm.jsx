@@ -88,7 +88,10 @@ const ApplyForm = () => {
   };
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
+    <section
+      id="apply-work"
+      className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white"
+    >
       <div className="max-w-2xl mx-auto">
         {isSubmitted ? (
           <motion.div

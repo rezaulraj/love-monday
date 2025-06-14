@@ -4,7 +4,7 @@ import contact from "../../assets/images/home/contact.jpg?url";
 
 const ContactHome = () => {
   return (
-    <section className="relative py-20 overflow-hidden">
+    <section id="contact-us-home" className="relative py-20 overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
@@ -16,7 +16,7 @@ const ContactHome = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 relative z-30">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -30,13 +30,14 @@ const ContactHome = () => {
           <p className="text-xl text-white/90 mb-8 font-light leading-relaxed max-w-lg mx-auto">
             Let's build your workforce the right way.
           </p>
-          <motion.button
+          <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-gradient-to-r from-orange-500 to-amber-500 text-white font-medium rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+            href="/contact-us"
+            className="px-8 py-4 bg-gradient-to-r from-secondary to-secondary/90 text-white font-medium rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
           >
             Send an Inquiry
-          </motion.button>
+          </motion.a>
         </motion.div>
       </div>
 

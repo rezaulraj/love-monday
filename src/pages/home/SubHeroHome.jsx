@@ -31,8 +31,8 @@ const SubHeroHome = () => {
           </div>
 
           {/* Headline */}
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-            <span className="text-secondary font-lobster tracking-widest">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 ">
+            <span className="text-secondary font-merriweather tracking-wider">
               Love
             </span>{" "}
             <span className="text-primary"> Monday</span> is your trusted

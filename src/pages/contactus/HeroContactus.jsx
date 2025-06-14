@@ -45,7 +45,7 @@ const HeroContactus = () => {
         >
           <div className="max-w-2xl">
             <motion.div variants={itemVariants}>
-              <span className="inline-block px-3 py-1 mb-4 text-sm font-semibold text-white bg-blue-600 rounded-full">
+              <span className="inline-block px-3 py-1 mb-4 text-sm font-semibold text-white bg-secondary rounded-full">
                 Get in Touch
               </span>
             </motion.div>
@@ -70,10 +70,22 @@ const HeroContactus = () => {
               variants={itemVariants}
               className="flex flex-wrap gap-4"
             >
-              <button className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+              <button
+                onClick={() => {
+                  const section = document.querySelector("#contact-schedule");
+                  section?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer"
+              >
                 Schedule a Call
               </button>
-              <button className="px-8 py-3 bg-transparent hover:bg-white/10 text-white font-medium border-2 border-white rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+              <button
+                onClick={() => {
+                  const section = document.querySelector("#contact-info");
+                  section?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="px-8 py-3 bg-transparent hover:bg-white/10 text-white font-medium border-2 border-white rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer"
+              >
                 Send a Message
               </button>
             </motion.div>

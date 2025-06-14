@@ -82,7 +82,10 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
+    <section
+      id="contact-info"
+      className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white"
+    >
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -275,7 +278,7 @@ const ContactForm = () => {
                 </div>
                 <label
                   htmlFor="conditions"
-                  className="ml-2 block text-sm text-gray-700 font-lato" 
+                  className="ml-2 block text-sm text-gray-700 font-lato"
                 >
                   I accept the conditions above
                 </label>

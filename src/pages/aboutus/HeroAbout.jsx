@@ -29,7 +29,7 @@ const HeroAbout = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            <span className="text-blue-400">Our Story</span> Behind Success
+            <span className="text-secondary">Our Story</span> Behind Success
           </motion.h1>
 
           <motion.p
@@ -48,10 +48,22 @@ const HeroAbout = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            <button className="px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl">
+            <button
+              onClick={() => {
+                const section = document.querySelector("#meet-our-team");
+                section?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="px-8 py-3 bg-secondary hover:bg-secondary/90 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer"
+            >
               Meet Our Team
             </button>
-            <button className="px-8 py-3 bg-transparent hover:bg-white/10 text-white font-medium border-2 border-white rounded-full transition-all duration-300 shadow-lg hover:shadow-xl">
+            <button
+              onClick={() => {
+                const section = document.querySelector("#love-monday-about");
+                section?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="px-8 py-3 bg-transparent hover:bg-white/10 text-white font-medium border-2 border-white rounded-full transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer"
+            >
               Our Values
             </button>
           </motion.div>

@@ -62,12 +62,15 @@ const HeroHome = () => {
             ></span>
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fadeIn delay-200">
-            <a
-              href="/contact"
+            <button
+              onClick={() => {
+                const section = document.querySelector("#contact-us-home");
+                section?.scrollIntoView({ behavior: "smooth" });
+              }}
               className="px-8 py-3 bg-white hover:bg-gray-100 text-indigo-600 font-medium rounded-full transition duration-300"
             >
               Contact Us
-            </a>
+            </button>
           </div>
         </div>
       </div>

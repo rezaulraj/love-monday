@@ -3,7 +3,7 @@ import contact from "../../assets/images/legalemployee/contact.jpg?url";
 import { motion } from "framer-motion";
 const ContactLegitimate = () => {
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section id="legitimate-contact" className="relative py-24 overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
@@ -41,15 +41,20 @@ const ContactLegitimate = () => {
             Our team is ready to guide you through the process and answer all
             your questions.
           </motion.p>
-          <p className="text-2xl font-bold italic mb-8 text-secondary">Let’s talk.</p>
+          <p className="text-2xl font-bold italic mb-8 text-secondary">
+            Let’s talk.
+          </p>
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            <button className="px-10 py-4 bg-gradient-to-r from-secondary to-secondary/90 text-white font-semibold uppercase tracking-wider rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:brightness-110 font-lato">
+            <a
+              href="/contact-us"
+              className="px-10 py-4 bg-gradient-to-r from-secondary to-secondary/90 text-white font-semibold uppercase tracking-wider rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:brightness-110 font-lato"
+            >
               Send An Inquiry
-            </button>
+            </a>
           </motion.div>
         </motion.div>
       </div>

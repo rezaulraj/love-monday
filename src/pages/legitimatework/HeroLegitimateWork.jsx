@@ -49,10 +49,22 @@ const HeroLegitimateWork = () => {
               transition={{ delay: 0.6, duration: 0.8 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <button className="px-8 py-3 bg-secondary hover:bg-secondary/90 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl">
+              <button
+                onClick={() => {
+                  const section = document.querySelector("#work-opportunities");
+                  section?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="px-8 py-3 bg-secondary hover:bg-secondary/90 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer"
+              >
                 Explore Work Opportunities
               </button>
-              <button className="px-8 py-3 bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 font-medium rounded-full transition-all duration-300">
+              <button
+                onClick={() => {
+                  const section = document.querySelector("#learn-our-process");
+                  section?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="px-8 py-3 bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 font-medium rounded-full transition-all duration-300 cursor-pointer"
+              >
                 Learn About Our Process
               </button>
             </motion.div>

@@ -14,8 +14,8 @@ const CompanyLogos = () => {
           className="max-w-4xl mx-auto text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 font-merriweather">
-            <span className="text-indigo-600">Compliance</span> &{" "}
-            <span className="text-amber-500">Partnerships</span>
+            <span className="text-primary">Compliance</span> &{" "}
+            <span className="text-secondary">Partnerships</span>
           </h2>
 
           <div className="relative">
@@ -23,8 +23,8 @@ const CompanyLogos = () => {
             <p className="relative text-lg md:text-xl text-gray-600 leading-relaxed font-lato px-4">
               We adhere strictly to all legal requirements and collaborate
               closely with accredited institutions in your country to ensure a{" "}
-              <span className="font-semibold text-indigo-600">smooth</span>,{" "}
-              <span className="font-semibold text-amber-500">transparent</span>,
+              <span className="font-semibold text-primary">smooth</span>,{" "}
+              <span className="font-semibold text-secondary">transparent</span>,
               and{" "}
               <span className="font-semibold text-emerald-500">compliant</span>{" "}
               recruitment process.

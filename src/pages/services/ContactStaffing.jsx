@@ -3,7 +3,7 @@ import saffcontact from "../../assets/images/services/saffcontact.jpg?url";
 import { motion } from "framer-motion";
 const ContactStaffing = () => {
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section id="work-force-contact" className="relative py-24 overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
@@ -44,9 +44,9 @@ const ContactStaffing = () => {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            <button className="px-10 py-4 bg-gradient-to-r from-secondary to-secondary/70 text-white font-semibold uppercase tracking-wider rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:brightness-110">
+            <a href="/contact-us" className="px-10 py-4 bg-gradient-to-r from-secondary to-secondary/70 text-white font-semibold uppercase tracking-wider rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:brightness-110">
               Send An Inquiry
-            </button>
+            </a>
           </motion.div>
         </motion.div>
       </div>

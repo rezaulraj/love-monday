@@ -46,7 +46,10 @@ const OurRoles = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section
+      id="work-opportunities"
+      className="py-20 bg-gradient-to-b from-gray-50 to-white"
+    >
       <div className="container mx-auto px-4">
         {/* Header Section */}
         <motion.div
@@ -57,14 +60,16 @@ const OurRoles = () => {
           className="max-w-4xl mx-auto text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 font-merriweather tracking-wider">
-            <span className="text-primary">Recruitment Assurance</span> and
-            Our Role
+            <span className="text-primary">Recruitment Assurance</span> and Our
+            Role
           </h2>
           <p className="text-xl text-gray-600 font-lato">
             At{" "}
-            <span className="font-semibold text-secondary font-lobster tracking-widest">Love Monday</span>,
-            we are committed to transparent, ethical, and compliant recruitment
-            for Romania, Malta, and Sharjah.
+            <span className="font-semibold text-secondary font-lobster tracking-widest">
+              Love Monday
+            </span>
+            , we are committed to transparent, ethical, and compliant
+            recruitment for Romania, Malta, and Sharjah.
           </p>
         </motion.div>
 
@@ -147,7 +152,7 @@ const OurRoles = () => {
                 </h3>
                 <p className="text-gray-700 mb-6">
                   As your trusted recruitment partner,{" "}
-                  <span className="text-secondary font-lobster tracking-widest pl-1">
+                  <span className="text-secondary font-merriweather tracking-wider pl-1">
                     Love
                   </span>{" "}
                   <span className="text-primary"> Monday</span> provides
@@ -210,7 +215,13 @@ const OurRoles = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <button className="px-8 py-3 bg-gradient-to-r from-secondary to-amber-500 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+          <button
+            onClick={() => {
+              const section = document.querySelector("#legitimate-contact");
+              section?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="px-8 py-3 bg-gradient-to-r from-secondary to-amber-500 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+          >
             Contact Our Compliance Team
           </button>
         </motion.div>

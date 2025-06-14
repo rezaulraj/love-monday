@@ -87,13 +87,13 @@ const FactPageHome = () => {
               <p className="text-lg md:text-xl text-gray-700 italic font-lato leading-relaxed">
                 "At{" "}
                 <span className="font-semibold">
-                  <span className="text-secondary font-lobster tracking-widest pl-1">
+                  <span className="text-secondary font-merriweather tracking-wider pl-1">
                     Love
                   </span>{" "}
                   <span className="text-primary"> Monday</span>
                 </span>
                 , we're proud of the{" "}
-                <span className="font-medium text-amber-500">
+                <span className="font-medium text-secondary">
                   long-term partnerships
                 </span>{" "}
                 we've built by consistently delivering{" "}
@@ -111,13 +111,14 @@ const FactPageHome = () => {
         </motion.div>
 
         <div className="mt-12 text-center">
-          <motion.button
+          <motion.a
+            href="/recruitment"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-full transition duration-300 shadow-lg hover:shadow-indigo-200"
+            className="px-8 py-3 bg-primary hover:bg-primary/80 text-white font-medium rounded-full transition duration-300 shadow-lg hover:shadow-indigo-200"
           >
             Discover Our Recruitment Process
-          </motion.button>
+          </motion.a>
         </div>
       </div>
     </section>

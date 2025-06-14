@@ -95,7 +95,10 @@ const MeetTeam = () => {
   ];
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
+    <section
+      id="meet-our-team"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white"
+    >
       <div className="max-w-7xl mx-auto">
         {/* Title Section */}
         <motion.div
@@ -108,7 +111,7 @@ const MeetTeam = () => {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 relative inline-block font-lato">
             <span className="relative">
               Meet the{" "}
-              <span className="text-secondary font-lobster tracking-widest">
+              <span className="text-secondary font-merriweather tracking-wider">
                 Love
               </span>{" "}
               <span className="text-primary">Monday</span> Team

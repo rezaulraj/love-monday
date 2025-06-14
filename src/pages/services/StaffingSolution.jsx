@@ -38,7 +38,10 @@ const StaffingSolution = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section
+      id="staffing-solution"
+      className="py-20 bg-gradient-to-b from-gray-50 to-white"
+    >
       <div className="container mx-auto px-4">
         {/* Header Section */}
         <motion.div
@@ -159,7 +162,13 @@ const StaffingSolution = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <button className="px-8 py-3 bg-gradient-to-r from-indigo-600 to-blue-500 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+          <button
+            onClick={() => {
+              const section = document.querySelector("#work-force-contact");
+              section?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="px-8 py-3 bg-gradient-to-r from-indigo-600 to-blue-500 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+          >
             Get Started with Our Staffing Solutions
           </button>
         </motion.div>

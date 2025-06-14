@@ -58,7 +58,10 @@ const ImmediateServiceRecruitment = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section
+      id="immediate-service"
+      className="py-20 bg-gradient-to-b from-gray-50 to-white"
+    >
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -126,7 +129,13 @@ const ImmediateServiceRecruitment = () => {
           viewport={{ once: true }}
           className="mt-16 text-center"
         >
-          <button className="px-8 py-3 bg-gradient-to-r from-secondary to-blue-500 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+          <button
+            onClick={() => {
+              const section = document.querySelector("#service-contact");
+              section?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="px-8 py-3 bg-gradient-to-r from-secondary to-blue-500 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+          >
             Request a Consultation
           </button>
         </motion.div>
