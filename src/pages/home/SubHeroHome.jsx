@@ -32,17 +32,28 @@ const SubHeroHome = () => {
 
           {/* Headline */}
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-            <span className="text-indigo-600 font-merriweather tracking-wider">Love Monday</span> is your trusted
+            <span className="text-secondary font-lobster tracking-widest">
+              Love
+            </span>{" "}
+            <span className="text-primary"> Monday</span> is your trusted
             international staffing agency
           </h2>
 
           {/* Main paragraph */}
           <p className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
             Connecting companies in{" "}
-            <span className="font-medium text-indigo-500 font-merriweather tracking-wider">Romania</span>,{" "}
-            <span className="font-medium text-indigo-500 font-merriweather tracking-wider">Malta</span>, and{" "}
-            <span className="font-medium text-indigo-500 font-merriweather tracking-wider">Sharjah</span> with
-            highly skilled workers.
+            <span className="font-medium text-indigo-500 font-merriweather tracking-wider">
+              Romania
+            </span>
+            ,{" "}
+            <span className="font-medium text-indigo-500 font-merriweather tracking-wider">
+              Malta
+            </span>
+            , and{" "}
+            <span className="font-medium text-indigo-500 font-merriweather tracking-wider">
+              Sharjah
+            </span>{" "}
+            with highly skilled workers.
           </p>
 
           {/* Highlighted secondary paragraph */}

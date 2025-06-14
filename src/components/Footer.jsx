@@ -17,8 +17,10 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="flex flex-col items-center lg:items-start">
             <div className="text-3xl font-bold mb-4">
-              <span className="text-orange-500">Love</span>
-              <span className="text-indigo-400">Monday</span>
+              <span className="text-secondary font-lobster tracking-widest">
+                Love
+              </span>
+              <span className="text-primary font-lobster tracking-widest"> Monday</span>
             </div>
             <p className="text-gray-400 text-center lg:text-left mb-6">
               Your trusted international staffing agency connecting talent with

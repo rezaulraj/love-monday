@@ -86,8 +86,11 @@ const FactPageHome = () => {
             <div className="relative px-8 py-6 bg-white rounded-lg shadow-sm border border-gray-100">
               <p className="text-lg md:text-xl text-gray-700 italic font-lato leading-relaxed">
                 "At{" "}
-                <span className="font-semibold text-indigo-600">
-                  Love Monday
+                <span className="font-semibold">
+                  <span className="text-secondary font-lobster tracking-widest pl-1">
+                    Love
+                  </span>{" "}
+                  <span className="text-primary"> Monday</span>
                 </span>
                 , we're proud of the{" "}
                 <span className="font-medium text-amber-500">

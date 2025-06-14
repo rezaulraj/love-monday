@@ -1,6 +1,18 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { FiChevronDown, FiMenu, FiX } from "react-icons/fi";
+import {
+  FiChevronDown,
+  FiMenu,
+  FiX,
+  FiHome,
+  FiBriefcase,
+  FiShield,
+  FiInfo,
+  FiMail,
+  FiUser,
+  FiGlobe,
+} from "react-icons/fi";
+import { FaUserTie, FaUsers } from "react-icons/fa";
 import ReactCountryFlag from "react-country-flag";
 
 const Header = () => {
@@ -16,18 +28,43 @@ const Header = () => {
   ];
 
   const navLists = [
-    { label: t("home"), path: "/" },
+    { label: t("home"), path: "/", icon: <FiHome className="mr-2" /> },
     {
       label: t("services"),
+      icon: <FiBriefcase className="mr-2" />,
       subNav: [
-        { label: t("recruitment Assistance"), path: "/recruitment" },
-        { label: t("workforce Staffing"), path: "/staffing" },
+        {
+          label: t("recruitment Assistance"),
+          path: "/recruitment",
+          icon: <FaUserTie className="mr-2" />,
+        },
+        {
+          label: t("workforce Staffing"),
+          path: "/staffing",
+          icon: <FaUsers className="mr-2" />,
+        },
       ],
     },
-    { label: t("legitimate Work"), path: "/legitimate-work" },
-    { label: t("about Us"), path: "/about" },
-    { label: t("contact Us"), path: "/contact" },
-    { label: t("apply For Work"), path: "/apply" },
+    {
+      label: t("legitimate Work"),
+      path: "/legitimate-work",
+      icon: <FiShield className="mr-2" />,
+    },
+    {
+      label: t("about Us"),
+      path: "about-us",
+      icon: <FiInfo className="mr-2" />,
+    },
+    {
+      label: t("contact Us"),
+      path: "/contact-us",
+      icon: <FiMail className="mr-2" />,
+    },
+    {
+      label: t("apply For Work"),
+      path: "/apply-for-work",
+      icon: <FiUser className="mr-2" />,
+    },
   ];
 
   const changeLanguage = (lng) => {
@@ -47,9 +84,9 @@ const Header = () => {
           <div className="flex items-center">
             <a
               href="/"
-              className="text-2xl font-bold text-indigo-600 font-lobster tracking-widest"
+              className="text-2xl font-bold text-primary font-lobster tracking-widest"
             >
-              <span className="text-orange-500 ">Love</span> Monday
+              <span className="text-secondary">Love</span> Monday
             </a>
           </div>
 
@@ -59,18 +96,14 @@ const Header = () => {
               {navLists.map((item, index) => (
                 <li
                   key={index}
-                  className="relative group uppercase text-sm font-lato font-semibold tracking-wide"
+                  className="relative group"
+                  onMouseEnter={() => setActiveSubmenu(index)}
+                  onMouseLeave={() => setActiveSubmenu(null)}
                 >
                   {item.subNav ? (
                     <>
-                      <div
-                        className="flex items-center text-gray-700 hover:text-indigo-600  transition cursor-pointer"
-                        onClick={() =>
-                          setActiveSubmenu(
-                            activeSubmenu === index ? null : index
-                          )
-                        }
-                      >
+                      <div className="flex items-center text-gray-700 hover:text-indigo-600 transition-colors cursor-pointer uppercase text-sm font-lato font-semibold tracking-wide">
+                        {item.icon}
                         {item.label}
                         <FiChevronDown
                           className={`ml-1 w-4 h-4 transition-transform ${
@@ -79,7 +112,7 @@ const Header = () => {
                         />
                       </div>
                       <ul
-                        className={`absolute left-0 mt-2 w-60 bg-white shadow-lg rounded-md py-1 transition-all duration-300 ${
+                        className={`absolute left-0 mt-0 w-60 bg-white shadow-lg rounded-md py-1 transition-all duration-300 z-50 ${
                           activeSubmenu === index
                             ? "opacity-100 translate-y-0"
                             : "opacity-0 translate-y-2 pointer-events-none"
@@ -89,8 +122,9 @@ const Header = () => {
                           <li key={subIndex}>
                             <a
                               href={subItem.path}
-                              className="block px-4 py-2 uppercase text-gray-700 hover:bg-indigo-50 hover:text-indigo-600"
+                              className="flex items-center px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors uppercase text-sm"
                             >
+                              {subItem.icon}
                               {subItem.label}
                             </a>
                           </li>
@@ -100,8 +134,9 @@ const Header = () => {
                   ) : (
                     <a
                       href={item.path}
-                      className="block text-gray-700 hover:text-indigo-600 transition-colors"
+                      className="flex items-center text-gray-700 hover:text-indigo-600 transition-colors uppercase text-sm font-lato font-semibold tracking-wide"
                     >
+                      {item.icon}
                       {item.label}
                     </a>
                   )}
@@ -110,11 +145,12 @@ const Header = () => {
             </ul>
 
             {/* Language Switcher */}
-            <div className="relative ml-4 ">
-              <div
-                className="flex items-center space-x-2 px-3 py-1 rounded-full bg-gray-100 cursor-pointer"
-                onClick={() => setIsLangOpen(!isLangOpen)}
-              >
+            <div
+              className="relative ml-4"
+              onMouseEnter={() => setIsLangOpen(true)}
+              onMouseLeave={() => setIsLangOpen(false)}
+            >
+              <div className="flex items-center space-x-2 px-3 py-1 rounded-full bg-gray-100 cursor-pointer hover:bg-gray-200 transition-colors">
                 <ReactCountryFlag
                   countryCode={currentLanguage?.country}
                   svg
@@ -134,12 +170,11 @@ const Header = () => {
               </div>
 
               <div
-                className={`absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md py-1 transition-all duration-300 ${
+                className={`absolute right-0 mt-0 w-48 bg-white shadow-lg rounded-md py-1 transition-all duration-300 z-50 ${
                   isLangOpen
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-2 pointer-events-none"
                 }`}
-                onMouseLeave={() => setIsLangOpen(false)}
               >
                 {languages.map((lang) => (
                   <div
@@ -170,7 +205,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <div
-            className="md:hidden text-gray-700 p-1 cursor-pointer hover:bg-gray-100 rounded-full"
+            className="md:hidden text-gray-700 p-1 cursor-pointer hover:bg-gray-100 rounded-full transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
@@ -186,14 +221,17 @@ const Header = () => {
                   {item.subNav ? (
                     <>
                       <div
-                        className="flex items-center justify-between w-full py-2 text-gray-700 cursor-pointer hover:bg-gray-100 px-3 rounded-lg"
+                        className="flex items-center justify-between w-full py-2 text-gray-700 cursor-pointer hover:bg-gray-100 px-3 rounded-lg transition-colors"
                         onClick={() =>
                           setActiveSubmenu(
                             activeSubmenu === index ? null : index
                           )
                         }
                       >
-                        {item.label}
+                        <div className="flex items-center">
+                          {item.icon}
+                          {item.label}
+                        </div>
                         <FiChevronDown
                           className={`w-4 h-4 transition-transform ${
                             activeSubmenu === index ? "rotate-180" : ""
@@ -201,13 +239,14 @@ const Header = () => {
                         />
                       </div>
                       {activeSubmenu === index && (
-                        <ul className="pl-4 space-y-2 mt-1">
+                        <ul className="pl-8 space-y-2 mt-1">
                           {item.subNav.map((subItem, subIndex) => (
                             <li key={subIndex}>
                               <a
                                 href={subItem.path}
-                                className="block py-1.5 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 px-3 rounded-lg"
+                                className="flex items-center py-1.5 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 px-3 rounded-lg transition-colors"
                               >
+                                {subItem.icon}
                                 {subItem.label}
                               </a>
                             </li>
@@ -218,20 +257,25 @@ const Header = () => {
                   ) : (
                     <a
                       href={item.path}
-                      className="block py-2 px-3 rounded-lg text-gray-700 hover:bg-gray-100"
+                      className="flex items-center py-2 px-3 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
                     >
+                      {item.icon}
                       {item.label}
                     </a>
                   )}
                 </li>
               ))}
               <li className="pt-2 border-t mt-2">
-                <div className="space-y-2">
+                <div className="flex items-center px-3 py-2 text-gray-700">
+                  <FiGlobe className="mr-2" />
+                  <span className="font-medium">Language</span>
+                </div>
+                <div className="space-y-2 mt-1">
                   {languages.map((lang) => (
                     <div
                       key={lang.code}
                       onClick={() => changeLanguage(lang.code)}
-                      className={`flex items-center px-3 py-2 rounded-lg cursor-pointer ${
+                      className={`flex items-center px-8 py-2 rounded-lg cursor-pointer transition-colors ${
                         i18n.language === lang.code
                           ? "bg-indigo-100 text-indigo-600"
                           : "text-gray-700 hover:bg-gray-100"

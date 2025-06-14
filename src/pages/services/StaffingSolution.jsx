@@ -72,7 +72,10 @@ const StaffingSolution = () => {
               <p className="text-gray-700 mb-6">
                 In this arrangement, workers are formally employed by{" "}
                 <span className="font-semibold text-indigo-600">
-                  Love Monday
+                  <span className="text-secondary font-lobster tracking-widest">
+                    Love
+                  </span>{" "}
+                  <span className="text-primary"> Monday</span>
                 </span>{" "}
                 and are seconded to your company under a staffing agreement.
                 This ensures a{" "}

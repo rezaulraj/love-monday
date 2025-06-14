@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import HeroContactus from "./HeroContactus";
+import ContactForm from "./ContactForm";
+import Contact from "./Contact";
 
 const ContactUs = () => {
   return (
-    <div>ContactUs</div>
-  )
-}
+    <div className="min-h-screen">
+      <HeroContactus />
+      <ContactForm />
+      <Contact />
+    </div>
+  );
+};
 
-export default ContactUs
+export default ContactUs;
