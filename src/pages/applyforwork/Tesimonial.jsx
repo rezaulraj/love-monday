@@ -1,19 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaQuoteLeft } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const Testimonials = () => {
+  const { t } = useTranslation();
   const testimonials = [
     {
-      quote:
-        "The agency was very responsive and helpful throughout my journey. I highly recommend their services to fellow workers seeking opportunities abroad.",
-      role: "Kitchen Staff",
+      quote: t("applyForWork.applyfortesfedp1"),
+      role: t("applyForWork.applyfortesfedp1n1"),
       accentColor: "bg-orange-500",
     },
     {
-      quote:
-        "They provided excellent service and secured the best employment for us. Many thanks to the team for their ongoing support and guidance!",
-      role: "Hospitality Sector",
+      quote: t("applyForWork.applyfortesfedp2"),
+      role: t("applyForWork.applyfortesfedp2n2"),
       accentColor: "bg-blue-500",
     },
   ];
@@ -41,7 +41,6 @@ const Testimonials = () => {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -50,12 +49,14 @@ const Testimonials = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 font-merriweather tracking-wider">
-            What Our <span className="text-blue-600">Workers Say</span>
+            {t("applyForWork.applyfortesh1")}
+            <span className="text-blue-600">
+              {t("applyForWork.applyfortesh2")}
+            </span>
           </h2>
           <div className="w-20 h-1 bg-blue-500 mx-auto"></div>
         </motion.div>
 
-        {/* Testimonials */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -69,7 +70,6 @@ const Testimonials = () => {
               variants={itemVariants}
               className="relative bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
             >
-              {/* Accent bar */}
               <div className={`${testimonial.accentColor} h-2 w-full`}></div>
 
               <div className="p-8">

@@ -8,45 +8,49 @@ import {
   FaGlobeAmericas,
   FaHandshake,
 } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const LegitimateWorkfolio = () => {
+  const { t } = useTranslation();
   const services = [
     {
       icon: <FaBalanceScale className="text-3xl" />,
-      title: "Employer Documentation",
-      description: "Verification of all required employer documentation",
+      title: t("legitimateWork.legimatrighth1"),
+      description: t("legitimateWork.legimatrightp1"),
     },
     {
       icon: <FaPassport className="text-3xl" />,
-      title: "Labor Approvals",
-      description: "Pre-approval from labor authorities (local and overseas)",
+      title: t("legitimateWork.legimatrighth2"),
+      description: t("legitimateWork.legimatrightp2"),
     },
     {
       icon: <FaFileContract className="text-3xl" />,
-      title: "Legal Contracts",
-      description: "Compliant employment contracts meeting all regulations",
+      title: t("legitimateWork.legimatrighth3"),
+      description: t("legitimateWork.legimatrightp3"),
     },
     {
       icon: <FaUserShield className="text-3xl" />,
-      title: "Health Checks",
-      description: "Medical examinations for fitness-to-work verification",
+      title: t("legitimateWork.legimatrighth4"),
+      description: t("legitimateWork.legimatrightp4"),
     },
     {
       icon: <FaGlobeAmericas className="text-3xl" />,
-      title: "Cultural Preparation",
-      description: "Pre-departure orientation and cultural briefings",
+      title: t("legitimateWork.legimatrighth5"),
+      description: t("legitimateWork.legimatrightp5"),
     },
     {
       icon: <FaHandshake className="text-3xl" />,
-      title: "Visa Processing",
-      description: "Complete visa and Stay & Work Permit processing",
+      title: t("legitimateWork.legimatrighth6"),
+      description: t("legitimateWork.legimatrightp6"),
     },
   ];
 
   return (
-    <section id="learn-our-process" className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section
+      id="learn-our-process"
+      className="py-20 bg-gradient-to-b from-gray-50 to-white"
+    >
       <div className="container mx-auto px-4">
-        {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -55,25 +59,26 @@ const LegitimateWorkfolio = () => {
           className="max-w-4xl mx-auto text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 font-merriweather tracking-wider">
-            <span className="text-primary">Legitimate</span> Work
+            <span className="text-primary">
+              {t("legitimateWork.legimatesubh1")}
+            </span>
+            {t("legitimateWork.legimatesubh2")}
           </h2>
           <p className="text-xl text-gray-600 mb-6 font-lato">
-            In a recruitment industry where shortcuts and non-compliant
-            practices still exist,
+            {t("legitimateWork.legimatesubp1")}
             <span className="font-semibold text-secondary">
               <span className="text-secondary font-merriweather tracking-wider pl-1">
-                Love
-              </span>{" "}
-              <span className="text-primary"> Monday</span>
-            </span>{" "}
-            stands apart by prioritizing transparency, legality, and ethical
-            hiring.
+                {t("legitimateWork.legimatesubp2")}
+              </span>
+              <span className="text-primary">
+                {t("legitimateWork.legimatesubp3")}
+              </span>
+            </span>
+            {t("legitimateWork.legimatesubp4")}
           </p>
         </motion.div>
 
-        {/* Two Column Layout */}
         <div className="flex flex-col lg:flex-row gap-12 max-w-6xl mx-auto">
-          {/* Left Column - Main Description */}
           <motion.div
             className="lg:w-1/2"
             initial={{ opacity: 0, x: -20 }}
@@ -83,39 +88,32 @@ const LegitimateWorkfolio = () => {
           >
             <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 mb-8 font-lato">
               <p className="text-gray-700 mb-6">
-                We strictly follow the employment regulations of{" "}
-                <span className="font-semibold">Romania</span>,{" "}
-                <span className="font-semibold">Malta</span>, and{" "}
-                <span className="font-semibold">Sharjah</span>, ensuring a
-                smooth and secure experience for both employers and workers.
+                {t("legitimateWork.legimatesublongp1")}
+                <span className="font-semibold">
+                  {t("legitimateWork.legimatesublongp2")}
+                </span>
+                {t("legitimateWork.legimatesublongp3")}
               </p>
               <p className="text-gray-700">
-                Our commitment to professionalism and compliance has led to
-                lasting partnerships and successful placements. With a
-                multicultural team including professionals familiar with the
-                legal and cultural landscapes of each destination, we provide
-                culturally aware support at every stage.
+                {t("legitimateWork.lefimatesubseclongp1")}
               </p>
             </div>
 
             <div className="bg-indigo-50 p-8 rounded-xl border border-indigo-100 font-lato">
               <h3 className="text-xl font-semibold text-indigo-800 mb-6">
-                By meeting every legal requirement, we ensure that workers
-                arrive fully prepared — professionally and personally.
+                {t("legitimateWork.legimameeth")}
               </h3>
               <div className="flex items-center space-x-4">
                 <div className="flex-shrink-0 bg-white p-3 rounded-full shadow-xs">
                   <FaHandshake className="text-indigo-600 text-2xl" />
                 </div>
                 <p className="text-gray-700">
-                  End-to-end compliance means peace of mind for both employers
-                  and employees.
+                  {t("legitimateWork.legimatemeetp")}
                 </p>
               </div>
             </div>
           </motion.div>
 
-          {/* Right Column - Services */}
           <div className="lg:w-1/2">
             <motion.div
               initial={{ opacity: 0 }}
@@ -126,12 +124,10 @@ const LegitimateWorkfolio = () => {
               <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 mb-8 font-lato">
                 <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center font-merriweather tracking-wider">
                   <FaUserShield className="text-indigo-600 mr-3" />
-                  Employer Accreditation
+                  {t("legitimateWork.legimaterighth")}
                 </h3>
                 <p className="text-gray-700 mb-6">
-                  Each destination we serve has specific legal requirements for
-                  hiring international workers. Love Monday ensures full
-                  compliance and provides:
+                  {t("legitimateWork.legimaterightp")}
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -164,24 +160,24 @@ const LegitimateWorkfolio = () => {
 
               <div className="bg-orange-50 p-6 rounded-xl border border-orange-100">
                 <h4 className="font-semibold text-gray-800 mb-3">
-                  Additional Compliance Services:
+                  {t("legitimateWork.legimateadditonh")}
                 </h4>
                 <ul className="space-y-2 text-gray-700 text-sm">
                   <li className="flex items-start">
                     <span className="text-orange-500 mr-2">•</span>
-                    Accreditation with relevant government departments
+                    {t("legitimateWork.legimateadditonl1")}
                   </li>
                   <li className="flex items-start">
                     <span className="text-orange-500 mr-2">•</span>
-                    Mandatory insurance (health, safety, and repatriation)
+                    {t("legitimateWork.legimateadditonl2")}
                   </li>
                   <li className="flex items-start">
                     <span className="text-orange-500 mr-2">•</span>
-                    Exit clearance certification (as required by origin country)
+                    {t("legitimateWork.legimateadditonl3")}
                   </li>
                   <li className="flex items-start">
                     <span className="text-orange-500 mr-2">•</span>
-                    Legal and social awareness training before deployment
+                    {t("legitimateWork.legimateadditonl4")}
                   </li>
                 </ul>
               </div>

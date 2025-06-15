@@ -7,14 +7,13 @@ import {
   FaUserCheck,
   FaUsers,
 } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const MeetTeam = () => {
-  // Paragraph text to animate
-  const paragraph =
-    "We are a trusted international recruitment and staffing agency specializing in the legal employment of Filipino workers in Romania, Malta, and Sharjah.";
+  const { t } = useTranslation();
+  const paragraph = t("aboutUs.aboutsubp");
   const words = paragraph.split(" ");
 
-  // Animation variants
   const container = {
     hidden: { opacity: 0 },
     visible: {
@@ -64,33 +63,28 @@ const MeetTeam = () => {
     }),
   };
 
-  // Intersection observer hooks
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   const facts = [
     {
       icon: <FaUsers className="text-4xl text-indigo-600" />,
-      title: "Thousands of Successfully Employed Workers",
-      description:
-        "Our proven track record speaks for itself with thousands of happy employees placed internationally.",
+      title: t("aboutUs.aboutcdh1"),
+      description: t("aboutUs.aboutcdp1"),
     },
     {
       icon: <FaHandshake className="text-4xl text-orange-500" />,
-      title: "Hundreds of Trusted Business Clients",
-      description:
-        "We've built long-term partnerships with companies across multiple industries.",
+      title: t("aboutUs.aboutcdh2"),
+      description: t("aboutUs.aboutcdp2"),
     },
     {
       icon: <FaUserCheck className="text-4xl text-emerald-500" />,
-      title: "A Vast Talent Pool of Pre-Screened Candidates",
-      description:
-        "Access to rigorously vetted professionals ready to join your team.",
+      title: t("aboutUs.aboutcdh3"),
+      description: t("aboutUs.aboutcdp3"),
     },
     {
       icon: <FaGlobeAmericas className="text-4xl text-amber-500" />,
-      title: "Years of Proven Experience in International Recruitment",
-      description:
-        "Deep expertise navigating global employment markets and regulations.",
+      title: t("aboutUs.aboutcdh4"),
+      description: t("aboutUs.aboutcdp4"),
     },
   ];
 
@@ -100,7 +94,6 @@ const MeetTeam = () => {
       className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white"
     >
       <div className="max-w-7xl mx-auto">
-        {/* Title Section */}
         <motion.div
           ref={ref}
           initial="hidden"
@@ -110,15 +103,15 @@ const MeetTeam = () => {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 relative inline-block font-merriweather tracking-wider">
             <span className="relative">
-              Meet The{" "}
+              {t("aboutUs.aboutsubh1")}
               <span className="text-secondary font-merriweather tracking-wider">
-                Love
-              </span>{" "}
-              <span className="text-primary">Monday</span> Team
+                {t("aboutUs.aboutsubh2")}
+              </span>
+              <span className="text-primary">{t("aboutUs.aboutsubh3")}</span>
+              {t("aboutUs.aboutsubh4")}
             </span>
           </h2>
 
-          {/* Animated Paragraph */}
           <motion.div
             className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
             variants={container}
@@ -141,7 +134,6 @@ const MeetTeam = () => {
           </motion.div>
         </motion.div>
 
-        {/* Facts Grid */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           initial="hidden"

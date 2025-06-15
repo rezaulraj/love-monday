@@ -1,11 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import imediate from "../../assets/images/services/imediate.jpg?url";
+import { useTranslation } from "react-i18next";
 
 const HeroRecruitment = () => {
+  const { t } = useTranslation();
   return (
     <section className="relative h-screen overflow-hidden">
-      {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
           src={imediate}
@@ -15,7 +16,6 @@ const HeroRecruitment = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/40 to-transparent"></div>
       </div>
 
-      {/* Content */}
       <div className="relative z-10 flex flex-col justify-end h-full pb-32 px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -29,8 +29,10 @@ const HeroRecruitment = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            <span className="text-secondary">Exceptional</span> Recruitment
-            Assistance
+            <span className="text-secondary">
+              {t("recruitmentAssistence.herorecassh1")}
+            </span>
+            {t("recruitmentAssistence.herorecassh2")}
           </motion.h1>
 
           <motion.p
@@ -39,8 +41,7 @@ const HeroRecruitment = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            Connecting top talent with leading organizations through innovative
-            staffing strategies
+            {t("recruitmentAssistence.herorecassp")}
           </motion.p>
 
           <motion.div
@@ -55,7 +56,7 @@ const HeroRecruitment = () => {
               }}
               className="px-8 py-3 bg-secondary hover:bg-secondary/80 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer"
             >
-              Explore Our Services
+              {t("recruitmentAssistence.herorecassbtn")}
             </button>
           </motion.div>
         </motion.div>

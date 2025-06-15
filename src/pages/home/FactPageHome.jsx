@@ -6,32 +6,30 @@ import {
   FaGlobeAmericas,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const FactPageHome = () => {
+  const { t } = useTranslation();
   const facts = [
     {
       icon: <FaUsers className="text-4xl text-indigo-600" />,
-      title: "Thousands of Successfully Employed Workers",
-      description:
-        "Our proven track record speaks for itself with thousands of happy employees placed internationally.",
+      title: t("homePage.statch1"),
+      description: t("homePage.statchp1"),
     },
     {
-      icon: <FaHandshake className="text-4xl text-orange-500" />,
-      title: "Hundreds of Trusted Business Clients",
-      description:
-        "We've built long-term partnerships with companies across multiple industries.",
+      icon: <FaHandshake className="text-4xl text-secondary" />,
+      title: t("homePage.statch2"),
+      description: t("homePage.statchp2"),
     },
     {
       icon: <FaUserCheck className="text-4xl text-emerald-500" />,
-      title: "A Vast Talent Pool of Pre-Screened Candidates",
-      description:
-        "Access to rigorously vetted professionals ready to join your team.",
+      title: t("homePage.statch3"),
+      description: t("homePage.statchp3"),
     },
     {
       icon: <FaGlobeAmericas className="text-4xl text-amber-500" />,
-      title: "Years of Proven Experience in International Recruitment",
-      description:
-        "Deep expertise navigating global employment markets and regulations.",
+      title: t("homePage.statch4"),
+      description: t("homePage.statchp4"),
     },
   ];
 
@@ -40,11 +38,12 @@ const FactPageHome = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 font-merriweather tracking-wider">
-            Our <span className="text-indigo-600">Impact</span> in Numbers
+            {t("homePage.imapact1")}
+            <span className="text-secondary">{t("homePage.imapact2")}</span>
+            {t("homePage.imapact3")}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto font-lato tracking-wide">
-            Quantifying our success through measurable achievements and
-            satisfied partners
+            {t("homePage.impactp")}
           </p>
         </div>
 
@@ -73,7 +72,6 @@ const FactPageHome = () => {
           ))}
         </div>
 
-        {/* Enhanced Last Paragraph */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -85,26 +83,26 @@ const FactPageHome = () => {
             <div className="absolute -inset-1 bg-gradient-to-r from-indigo-200 to-amber-200 rounded-lg blur opacity-25"></div>
             <div className="relative px-8 py-6 bg-white rounded-lg shadow-sm border border-gray-100">
               <p className="text-lg md:text-xl text-gray-700 italic font-lato leading-relaxed">
-                "At{" "}
+                "{t("homePage.statnote1")}{" "}
                 <span className="font-semibold">
                   <span className="text-secondary font-merriweather tracking-wider pl-1">
-                    Love
+                    {t("homePage.love")}
                   </span>{" "}
-                  <span className="text-primary"> Monday</span>
+                  <span className="text-primary">{t("homePage.monday")}</span>
                 </span>
-                , we're proud of the{" "}
+                , {t("homePage.statnote2")}{" "}
                 <span className="font-medium text-secondary">
-                  long-term partnerships
+                  {t("homePage.statnote3")}
                 </span>{" "}
-                we've built by consistently delivering{" "}
+                {t("homePage.statnote4")}
                 <span className="font-medium text-emerald-500">
-                  quality talent
-                </span>{" "}
-                and{" "}
+                  {t("homePage.statnote5")}
+                </span>
+                {t("homePage.statnote6")}{" "}
                 <span className="font-medium text-blue-500">
-                  compliant hiring solutions
+                  {t("homePage.statnote7")}
                 </span>{" "}
-                across borders."
+                {t("homePage.statnote8")}"
               </p>
             </div>
           </div>
@@ -117,7 +115,7 @@ const FactPageHome = () => {
             whileTap={{ scale: 0.95 }}
             className="px-8 py-3 bg-primary hover:bg-primary/80 text-white font-medium rounded-full transition duration-300 shadow-lg hover:shadow-indigo-200"
           >
-            Discover Our Recruitment Process
+            {t("homePage.statbtn")}
           </motion.a>
         </div>
       </div>

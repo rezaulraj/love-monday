@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const HeroHome = () => {
+  const { t } = useTranslation();
   const [displayText, setDisplayText] = useState("");
-  const fullText =
-    "Reliable, transparent, and safe process of hiring reliable workers";
+  const fullText = t("homePage.herotextsub");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showCursor, setShowCursor] = useState(true);
 
@@ -12,22 +13,20 @@ const HeroHome = () => {
       const timeout = setTimeout(() => {
         setDisplayText((prev) => prev + fullText[currentIndex]);
         setCurrentIndex((prev) => prev + 1);
-      }, 50); // Typing speed (adjust as needed)
+      }, 50);
 
       return () => clearTimeout(timeout);
     } else {
-      // Blinking cursor effect after typing completes
       const cursorInterval = setInterval(() => {
         setShowCursor((prev) => !prev);
       }, 500);
 
       return () => clearInterval(cursorInterval);
     }
-  }, [currentIndex]);
+  }, [currentIndex, fullText]);
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <video
           autoPlay
@@ -43,15 +42,13 @@ const HeroHome = () => {
           Your browser does not support the video tag.
         </video>
 
-        {/* Video overlay for better text contrast */}
         <div className="absolute inset-0 bg-black/30 bg-opacity-30"></div>
       </div>
 
-      {/* Content */}
       <div className="relative z-10 flex flex-col justify-center items-center h-full text-center px-4">
         <div className="max-w-4xl mx-auto text-white">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fadeIn">
-            Find Your Dream Career With Us
+            {t("homePage.herotexth")}
           </h1>
           <p className="text-xl md:text-2xl mb-8 min-h-[72px] font-semibold tracking-wide leading-relaxed">
             {displayText}
@@ -69,13 +66,12 @@ const HeroHome = () => {
               }}
               className="px-8 py-3 bg-white hover:bg-gray-100 text-indigo-600 font-medium rounded-full transition duration-300"
             >
-              Contact Us
+              {t("homePage.contact-us")}
             </button>
           </div>
         </div>
       </div>
 
-      {/* Custom styling */}
       <style jsx>{`
         .animate-fadeIn {
           animation: fadeIn 1s ease-out forwards;

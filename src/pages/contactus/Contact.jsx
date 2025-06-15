@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FiMail, FiMapPin } from "react-icons/fi";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const { t } = useTranslation();
   const locations = [
     {
       title: "HQ Romania",
@@ -31,7 +33,6 @@ const Contact = () => {
       className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white"
     >
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -40,17 +41,15 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 font-merriweather tracking-wider">
-            Contact <span className="text-blue-600">Section</span>
+            {t("contactUs.contactsh1")}
+            <span className="text-blue-600">{t("contactUs.contactsh2")}</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Have questions about the recruitment process or how international
-            staffing can benefit your business? Our team is here to help, don't
-            hesitate to reach out.
+            {t("contactUs.conatp")}
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -64,7 +63,7 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-1 font-merriweather tracking-wider">
-                  Email
+                  {t("contactUs.eamil")}
                 </h3>
                 <a
                   href="mailto:xhaferi@lovemonday.agency"
@@ -81,7 +80,7 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-4 font-merriweather tracking-wider">
-                  Our Offices
+                  {t("contactUs.ouroffic")}
                 </h3>
                 <div className="space-y-6">
                   {locations.map((location, index) => (
@@ -100,7 +99,6 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          {/* Maps */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}

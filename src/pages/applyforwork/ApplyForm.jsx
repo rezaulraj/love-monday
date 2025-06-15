@@ -8,8 +8,10 @@ import {
   FiPhone,
   FiBriefcase,
 } from "react-icons/fi";
+import { useTranslation } from "react-i18next";
 
 const ApplyForm = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -50,7 +52,7 @@ const ApplyForm = () => {
 
     requiredFields.forEach((field) => {
       if (!formData[field]) {
-        newErrors[field] = "This field is required";
+        newErrors[field] = t("applyForWork.requiref");
       }
     });
 
@@ -69,7 +71,6 @@ const ApplyForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      // Form submission logic would go here
       console.log("Form submitted:", formData);
       setIsSubmitted(true);
     }
@@ -125,7 +126,7 @@ const ApplyForm = () => {
           >
             <div className="bg-primary p-6 text-center">
               <h2 className="text-2xl font-bold text-white">
-                Application Form
+                {t("applyForWork.appworkaph")}
               </h2>
             </div>
 
@@ -133,31 +134,31 @@ const ApplyForm = () => {
               <div className="space-y-6">
                 {[
                   {
-                    label: "First Name*",
+                    label: t("applyForWork.fname"),
                     name: "firstName",
                     type: "text",
                     icon: <FiUser className="text-gray-400" />,
                   },
                   {
-                    label: "Last Name*",
+                    label: t("applyForWork.lname"),
                     name: "lastName",
                     type: "text",
                     icon: <FiUser className="text-gray-400" />,
                   },
                   {
-                    label: "Email Address*",
+                    label: t("applyForWork.ead"),
                     name: "email",
                     type: "email",
                     icon: <FiMail className="text-gray-400" />,
                   },
                   {
-                    label: "Contact Number*",
+                    label: t("applyForWork.cnum"),
                     name: "phone",
                     type: "tel",
                     icon: <FiPhone className="text-gray-400" />,
                   },
                   {
-                    label: "Position Applying For*",
+                    label: t("applyForWork.poaf"),
                     name: "position",
                     type: "text",
                     icon: <FiBriefcase className="text-gray-400" />,
@@ -202,7 +203,7 @@ const ApplyForm = () => {
                   className="space-y-1"
                 >
                   <label className="block text-sm font-medium text-gray-700">
-                    Upload Resume*
+                    {t("applyForWork.upre")}
                   </label>
                   <label className="flex flex-col items-center px-4 py-6 bg-white rounded-lg border border-dashed border-gray-300 cursor-pointer hover:bg-gray-50">
                     <div className="flex flex-col items-center">
@@ -251,7 +252,7 @@ const ApplyForm = () => {
                       htmlFor="terms"
                       className="ml-2 block text-sm text-gray-700"
                     >
-                      I accept the terms and conditions
+                      {t("applyForWork.conditon")}
                     </label>
                   </div>
                   {errors.acceptTerms && (
@@ -270,7 +271,7 @@ const ApplyForm = () => {
                     type="submit"
                     className="w-full px-6 py-3 bg-primary hover:bg-blue-700 text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
                   >
-                    Submit Application
+                    {t("applyForWork.appforwobtn")}
                   </button>
                 </motion.div>
               </div>

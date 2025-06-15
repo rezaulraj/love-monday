@@ -31,40 +31,40 @@ const Header = () => {
   ];
 
   const navLists = [
-    { label: t("home"), path: "/", icon: <FiHome className="mr-2" /> },
+    { label: t("navItems.home"), path: "/", icon: <FiHome className="mr-2" /> },
     {
-      label: t("services"),
+      label: t("navItems.services.serviceroot"),
       icon: <FiBriefcase className="mr-2" />,
       subNav: [
         {
-          label: t("recruitment Assistance"),
+          label: t("navItems.services.service1"),
           path: "/recruitment",
           icon: <FaUserTie className="mr-2" />,
         },
         {
-          label: t("workforce Staffing"),
+          label: t("navItems.services.service2"),
           path: "/staffing",
           icon: <FaUsers className="mr-2" />,
         },
       ],
     },
     {
-      label: t("legitimate Work"),
+      label: t("navItems.legitimate-work"),
       path: "/legitimate-work",
       icon: <FiShield className="mr-2" />,
     },
     {
-      label: t("about Us"),
+      label: t("navItems.about-us"),
       path: "/about-us",
       icon: <FiInfo className="mr-2" />,
     },
     {
-      label: t("contact Us"),
+      label: t("navItems.contact-us"),
       path: "/contact-us",
       icon: <FiMail className="mr-2" />,
     },
     {
-      label: t("apply For Work"),
+      label: t("navItems.apply-for-work"),
       path: "/apply-for-work",
       icon: <FiUser className="mr-2" />,
     },
@@ -100,7 +100,11 @@ const Header = () => {
               href="/"
               className="text-2xl font-bold text-primary font-lobster tracking-widest"
             >
-              <img src={lovemonday} alt="Love Monday Logo" className="h-12 hover:scale-105 transition-transform duration-500" />
+              <img
+                src={lovemonday}
+                alt="Love Monday Logo"
+                className="h-12 hover:scale-105 transition-transform duration-500"
+              />
             </a>
           </div>
 
@@ -176,7 +180,7 @@ const Header = () => {
               onMouseEnter={() => setIsLangOpen(true)}
               onMouseLeave={() => setIsLangOpen(false)}
             >
-              <div className="flex items-center space-x-2 px-3 py-1 rounded-full bg-gray-100 cursor-pointer hover:bg-gray-200 transition-colors">
+              <div className="flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-50 cursor-pointer hover:bg-blue-100 transition-colors">
                 <ReactCountryFlag
                   countryCode={currentLanguage?.country}
                   svg
@@ -306,7 +310,7 @@ const Header = () => {
               <li className="pt-2 border-t mt-2">
                 <div className="flex items-center px-3 py-2 text-gray-700">
                   <FiGlobe className="mr-2" />
-                  <span className="font-medium">Language</span>
+                  <span className="font-medium">{t("navItems.language")}</span>
                 </div>
                 <div className="space-y-2 mt-1">
                   {languages.map((lang) => (

@@ -8,52 +8,54 @@ import {
   FaPlane,
   FaHandshake,
 } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const ImmediateServiceRecruitment = () => {
+  const { t } = useTranslation();
   const services = [
     {
       icon: <FaUserTie className="text-secondary" />,
-      text: "Workforce needs analysis tailored to your business goals",
+      text: t("recruitmentAssistence.resservice1"),
     },
     {
       icon: <FaFileAlt className="text-primary" />,
-      text: "Client accreditation with relevant regulatory bodies",
+      text: t("recruitmentAssistence.resservice2"),
     },
     {
       icon: <FaUserTie className="text-orange-500" />,
-      text: "Talent sourcing through our database and direct outreach",
+      text: t("recruitmentAssistence.resservice3"),
     },
     {
       icon: <FaCheckCircle className="text-green-500" />,
-      text: "Candidate interviews and pre-selection",
+      text: t("recruitmentAssistence.resservice4"),
     },
     {
       icon: <FaHandshake className="text-blue-500" />,
-      text: "Presentation of shortlisted candidates to your team",
+      text: t("recruitmentAssistence.resservice5"),
     },
     {
       icon: <FaFileAlt className="text-primary/90" />,
-      text: "Full documentation support for work and residency permits",
+      text: t("recruitmentAssistence.resservice6"),
     },
     {
       icon: <FaGlobe className="text-teal-500" />,
-      text: "Visa processing and coordination for entry into the destination country",
+      text: t("recruitmentAssistence.resservice7"),
     },
     {
       icon: <FaPlane className="text-purple-500" />,
-      text: "Travel and logistics arrangements for workers",
+      text: t("recruitmentAssistence.resservice8"),
     },
     {
       icon: <FaGlobe className="text-teal-500" />,
-      text: "Pre-departure orientation and cultural training",
+      text: t("recruitmentAssistence.resservice9"),
     },
     {
       icon: <FaHandshake className="text-blue-500" />,
-      text: "Post-arrival administrative support",
+      text: t("recruitmentAssistence.resservice10"),
     },
     {
       icon: <FaCheckCircle className="text-green-500" />,
-      text: "Ongoing supervision and worker integration monitoring",
+      text: t("recruitmentAssistence.resservice11"),
     },
   ];
 
@@ -71,12 +73,13 @@ const ImmediateServiceRecruitment = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 font-merriweather tracking-wider">
-            <span className="text-primary">Intermediary</span> Services
+            <span className="text-primary">
+              {t("recruitmentAssistence.recsubh1")}
+            </span>
+            {t("recruitmentAssistence.recsubh2")}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We offer full-scale intermediary support to ensure a smooth and
-            compliant recruitment process for international employers in
-            Romania, Malta, and Sharjah.
+            {t("recruitmentAssistence.recsubp")}
           </p>
         </motion.div>
 
@@ -89,13 +92,17 @@ const ImmediateServiceRecruitment = () => {
             className="mb-12 bg-white p-8 rounded-xl shadow-sm border border-gray-100"
           >
             <p className="text-lg text-gray-700">
-              Our team manages every step on your behalf, ensuring{" "}
+              {t("recruitmentAssistence.ressubnote1")}
               <span className="font-semibold text-primary">
-                legal compliance
+                {t("recruitmentAssistence.ressubnote2")}
               </span>
-              , <span className="font-semibold text-sec">efficiency</span>, and{" "}
-              <span className="font-semibold text-green-500">
-                peace of mind
+              ,{" "}
+              <span className="font-semibold text-secondary">
+                {t("recruitmentAssistence.ressubnote3")}
+              </span>
+              , {t("recruitmentAssistence.ressubnote4")}
+              <span className="font-semibold text-green-600">
+                {t("recruitmentAssistence.ressubnote5")}
               </span>
               :
             </p>
@@ -134,7 +141,7 @@ const ImmediateServiceRecruitment = () => {
             }}
             className="px-8 py-3 bg-gradient-to-r from-secondary to-blue-500 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
           >
-            Request a Consultation
+            {t("recruitmentAssistence.resservicebtn")}
           </button>
         </motion.div>
       </div>

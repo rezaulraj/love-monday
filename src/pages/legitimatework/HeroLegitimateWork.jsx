@@ -1,10 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import herolegal from "../../assets/images/legalemployee/herolegal.jpg?url";
+import { useTranslation } from "react-i18next";
 const HeroLegitimateWork = () => {
+  const { t } = useTranslation();
   return (
     <section className="relative h-screen min-h-[700px] overflow-hidden">
-      {/* Background Image with Gradient Overlay */}
       <div className="absolute inset-0 z-0">
         <img
           src={herolegal}
@@ -14,7 +15,6 @@ const HeroLegitimateWork = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-gray-900/70 via-gray-900/50 to-transparent"></div>
       </div>
 
-      {/* Content */}
       <div className="relative z-10 h-full flex items-center">
         <div className="container mx-auto px-6 lg:px-8">
           <motion.div
@@ -29,8 +29,10 @@ const HeroLegitimateWork = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.8 }}
             >
-              <span className="text-secondary">Legitimate</span> Work
-              Opportunities
+              <span className="text-secondary">
+                {t("legitimateWork.legitimateheroh1")}
+              </span>
+              {t("legitimateWork.legitimateheroh2")}
             </motion.h1>
 
             <motion.p
@@ -39,8 +41,7 @@ const HeroLegitimateWork = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              Fully compliant international employment with complete legal
-              protection and fair working conditions for all workers.
+              {t("legitimateWork.legitimateherop")}
             </motion.p>
 
             <motion.div
@@ -56,7 +57,7 @@ const HeroLegitimateWork = () => {
                 }}
                 className="px-8 py-3 bg-secondary hover:bg-secondary/90 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer"
               >
-                Explore Work Opportunities
+                {t("legitimateWork.legitimateherobtn1")}
               </button>
               <button
                 onClick={() => {
@@ -65,14 +66,13 @@ const HeroLegitimateWork = () => {
                 }}
                 className="px-8 py-3 bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 font-medium rounded-full transition-all duration-300 cursor-pointer"
               >
-                Learn About Our Process
+                {t("legitimateWork.legitimateherobtn2")}
               </button>
             </motion.div>
           </motion.div>
         </div>
       </div>
 
-      {/* Trust Badges */}
       <motion.div
         className="absolute bottom-8 left-8 z-10 hidden lg:block"
         initial={{ opacity: 0 }}
@@ -80,16 +80,18 @@ const HeroLegitimateWork = () => {
         transition={{ delay: 1, duration: 0.8 }}
       >
         <div className="flex items-center space-x-4 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20">
-          <div className="text-white font-medium text-sm">Certified by:</div>
+          <div className="text-white font-medium text-sm">
+            {t("legitimateWork.catifip1")}
+          </div>
           <div className="flex space-x-2">
             <span className="text-xs bg-white text-gray-800 px-3 py-1 rounded-full font-semibold">
-              EU Labor Standards
+              {t("legitimateWork.catifibtn1")}
             </span>
             <span className="text-xs bg-white text-gray-800 px-3 py-1 rounded-full font-semibold">
-              Dâmboviţa Chamber
+              {t("legitimateWork.catifibtn2")}
             </span>
             <span className="text-xs bg-white text-gray-800 px-3 py-1 rounded-full font-semibold">
-              Malta Employment
+              {t("legitimateWork.catifibtn3")}
             </span>
           </div>
         </div>

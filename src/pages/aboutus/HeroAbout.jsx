@@ -1,11 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import heroTeam from "../../assets/images/about/heroTeam.jpg?url";
+import { useTranslation } from "react-i18next";
 
 const HeroAbout = () => {
+  const { t } = useTranslation();
   return (
     <section className="relative h-screen overflow-hidden">
-      {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
           src={heroTeam}
@@ -15,7 +16,6 @@ const HeroAbout = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/40 to-transparent"></div>
       </div>
 
-      {/* Content */}
       <div className="relative z-10 flex flex-col justify-end h-full pb-32 px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -29,7 +29,8 @@ const HeroAbout = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            <span className="text-secondary">Our Story</span> Behind Success
+            <span className="text-secondary">{t("aboutUs.aboutheroh1")}</span>
+            {t("aboutUs.aboutheroh2")}
           </motion.h1>
 
           <motion.p
@@ -38,8 +39,7 @@ const HeroAbout = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            A passionate team dedicated to innovation, excellence, and creating
-            meaningful impact for our clients and community
+            {t("aboutUs.aboutherop")}
           </motion.p>
 
           <motion.div
@@ -55,7 +55,7 @@ const HeroAbout = () => {
               }}
               className="px-8 py-3 bg-secondary hover:bg-secondary/90 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer"
             >
-              Meet Our Team
+              {t("aboutUs.aboutherobtn1")}
             </button>
             <button
               onClick={() => {
@@ -64,7 +64,7 @@ const HeroAbout = () => {
               }}
               className="px-8 py-3 bg-transparent hover:bg-white/10 text-white font-medium border-2 border-white rounded-full transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer"
             >
-              Our Values
+              {t("aboutUs.aboutherobtn2")}
             </button>
           </motion.div>
         </motion.div>

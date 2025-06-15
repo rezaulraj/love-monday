@@ -1,11 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import staffing from "../../assets/images/services/stafing.jpg?url";
+import { useTranslation } from "react-i18next";
 
 const HeroStaffing = () => {
+  const { t } = useTranslation();
   return (
     <section className="relative h-screen min-h-[600px] overflow-hidden">
-      {/* Background Image with Gradient Overlay */}
       <div className="absolute inset-0 z-0">
         <img
           src={staffing}
@@ -15,7 +16,6 @@ const HeroStaffing = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-gray-900/70 via-gray-900/50 to-transparent"></div>
       </div>
 
-      {/* Content */}
       <div className="relative z-10 h-full flex items-center">
         <div className="container mx-auto px-6 lg:px-8">
           <motion.div
@@ -30,8 +30,10 @@ const HeroStaffing = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.8 }}
             >
-              <span className="text-secondary">Workforce</span> Staffing
-              Solutions
+              <span className="text-secondary">
+                {t("workforceStaffing.workfostheroh1")}
+              </span>{" "}
+              {t("workforceStaffing.workfostheroh2")}
             </motion.h1>
 
             <motion.p
@@ -40,8 +42,7 @@ const HeroStaffing = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              We connect businesses with pre-vetted, highly skilled
-              professionals ready to contribute to your success from day one.
+              {t("workforceStaffing.workfostherop")}
             </motion.p>
 
             <motion.div
@@ -57,7 +58,7 @@ const HeroStaffing = () => {
                 }}
                 className="px-8 py-3 bg-secondary hover:bg-secondary/70 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
               >
-                Request Staffing Support
+                {t("workforceStaffing.workforherobtn1")}
               </button>
               <button
                 onClick={() => {
@@ -66,7 +67,7 @@ const HeroStaffing = () => {
                 }}
                 className="px-8 py-3 bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 font-medium rounded-full transition-all duration-300"
               >
-                Learn More
+                {t("workforceStaffing.workforherobtn2")}
               </button>
             </motion.div>
           </motion.div>

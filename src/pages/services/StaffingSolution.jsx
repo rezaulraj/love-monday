@@ -7,33 +7,35 @@ import {
   FaShieldAlt,
   FaUserCog,
 } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const StaffingSolution = () => {
+  const { t } = useTranslation();
   const benefits = [
     {
       icon: <FaBriefcase className="text-2xl text-primary" />,
-      title: "Flexible Staffing",
-      description: "Minimum 6-month placements in Romania, Malta, and Sharjah",
+      title: t("workforceStaffing.workforitemh1"),
+      description: t("workforceStaffing.workforitemp1"),
     },
     {
       icon: <FaFileContract className="text-2xl text-secondary" />,
-      title: "Legal Compliance",
-      description: "Workers employed by us, seconded to you under agreement",
+      title: t("workforceStaffing.workforitemh2"),
+      description: t("workforceStaffing.workforitemp2"),
     },
     {
       icon: <FaHandshake className="text-2xl text-blue-500" />,
-      title: "Fair Conditions",
-      description: "Employment terms match or exceed direct hire standards",
+      title: t("workforceStaffing.workforitemh3"),
+      description: t("workforceStaffing.workforitemp3"),
     },
     {
       icon: <FaShieldAlt className="text-2xl text-green-500" />,
-      title: "Full Administration",
-      description: "We handle all HR, payroll, and compliance matters",
+      title: t("workforceStaffing.workforitemh4"),
+      description: t("workforceStaffing.workforitemp4"),
     },
     {
       icon: <FaUserCog className="text-2xl text-purple-500" />,
-      title: "Ongoing Support",
-      description: "Continuous HR and worker assistance throughout placement",
+      title: t("workforceStaffing.workforitemh5"),
+      description: t("workforceStaffing.workforitemp5"),
     },
   ];
 
@@ -43,7 +45,6 @@ const StaffingSolution = () => {
       className="py-20 bg-gradient-to-b from-gray-50 to-white"
     >
       <div className="container mx-auto px-4">
-        {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -52,18 +53,17 @@ const StaffingSolution = () => {
           className="text-center mb-16 max-w-4xl mx-auto"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 font-merriweather tracking-wider">
-            <span className="text-primary">Staffing</span> Solutions
+            <span className="text-primary">
+              {t("workforceStaffing.workforsubh1")}
+            </span>
+            {t("workforceStaffing.workforsubh2")}
           </h2>
           <p className="text-xl text-gray-600 mb-6">
-            We offer flexible staffing options for employers in Romania, Malta,
-            and Sharjah through a temporary employment model. The minimum
-            placement duration is six months.
+            {t("workforceStaffing.workforsubp")}
           </p>
         </motion.div>
 
-        {/* Two Column Layout */}
         <div className="flex flex-col lg:flex-row gap-12 max-w-6xl mx-auto">
-          {/* Left Column - Main Description */}
           <motion.div
             className="lg:w-1/2"
             initial={{ opacity: 0, x: -20 }}
@@ -73,57 +73,55 @@ const StaffingSolution = () => {
           >
             <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 mb-8">
               <p className="text-gray-700 mb-6">
-                In this arrangement, workers are formally employed by{" "}
+                {t("workforceStaffing.workforlongp1")}
                 <span className="font-semibold text-primary">
-                  <span className="text-secondary font-lobster tracking-widest">
-                    Love
-                  </span>{" "}
-                  <span className="text-primary"> Monday</span>
+                  <span className="text-secondary font-merriweather tracking-wider">
+                    {t("workforceStaffing.workforlongp2")}
+                  </span>
+                  <span className="text-primary">
+                    {t("workforceStaffing.workforlongp3")}
+                  </span>
                 </span>{" "}
-                and are seconded to your company under a staffing agreement.
-                This ensures a{" "}
+                {t("workforceStaffing.workforlongp4")}
                 <span className="font-semibold">
-                  streamlined and legally compliant
+                  {t("workforceStaffing.workforlongp5")}
                 </span>{" "}
-                process with minimal administrative burden on your end.
+                {t("workforceStaffing.workforlongp6")}
               </p>
               <p className="text-gray-700">
-                All employment conditions — including wages, working hours, rest
-                periods, leave entitlements, and workplace safety — will{" "}
+                {t("workforceStaffing.workforlongsp1")}
                 <span className="font-semibold text-green-500">
-                  match or exceed
+                  {t("workforceStaffing.workforlongsp2")}
                 </span>{" "}
-                what the worker would receive under a direct employment contract
-                with your company.
+                {t("workforceStaffing.workforlongsp3")}
               </p>
             </div>
 
             <div className="bg-indigo-50 p-8 rounded-xl border border-indigo-100">
               <h3 className="text-xl font-semibold text-indigo-800 mb-4">
-                Our team handles the full scope of employment administration:
+                {t("workforceStaffing.workforteamh")}
               </h3>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start">
                   <span className="text-indigo-500 mr-2">•</span>
-                  Registration for health and pension insurance
+                  {t("workforceStaffing.workforteaml1")}
                 </li>
                 <li className="flex items-start">
                   <span className="text-indigo-500 mr-2">•</span>
-                  Payroll management and salary disbursement
+                  {t("workforceStaffing.workforteaml2")}
                 </li>
                 <li className="flex items-start">
                   <span className="text-indigo-500 mr-2">•</span>
-                  Compliance with labor and tax regulations
+                  {t("workforceStaffing.workforteaml3")}
                 </li>
                 <li className="flex items-start">
                   <span className="text-indigo-500 mr-2">•</span>
-                  Ongoing HR and worker support
+                  {t("workforceStaffing.workforteaml4")}
                 </li>
               </ul>
             </div>
           </motion.div>
 
-          {/* Right Column - Benefits Cards */}
           <div className="lg:w-1/2">
             <motion.div
               initial={{ opacity: 0 }}
@@ -154,7 +152,6 @@ const StaffingSolution = () => {
           </div>
         </div>
 
-        {/* CTA Section */}
         <motion.div
           className="mt-16 text-center"
           initial={{ opacity: 0 }}
@@ -169,7 +166,7 @@ const StaffingSolution = () => {
             }}
             className="px-8 py-3 bg-gradient-to-r from-indigo-600 to-blue-500 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
           >
-            Get Started with Our Staffing Solutions
+            {t("workforceStaffing.workforitembtn")}
           </button>
         </motion.div>
       </div>

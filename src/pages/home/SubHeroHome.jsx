@@ -1,21 +1,20 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const SubHeroHome = () => {
+  const { t } = useTranslation();
   return (
     <section className="relative py-16 bg-gradient-to-b from-indigo-50 to-white">
-      {/* Decorative elements */}
       <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-white to-transparent"></div>
       <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
 
       <div className="container mx-auto px-4">
-        {/* Main content */}
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          {/* Icon/Logo */}
           <div className="mb-6 flex justify-center">
             <div className="w-16 h-16 rounded-full bg-indigo-100 flex items-center justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-8 w-8 text-indigo-600"
+                className="h-8 w-8 text-secondary"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -30,66 +29,64 @@ const SubHeroHome = () => {
             </div>
           </div>
 
-          {/* Headline */}
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 font-merriweather tracking-wider leading-relaxed">
             <span className="text-secondary font-merriweather tracking-wider">
-              Love
+              {t("homePage.love")}
             </span>{" "}
-            <span className="text-primary"> Monday</span> Is Your Trusted
-            International Staffing Agency
+            <span className="text-primary">{t("homePage.monday")}</span>
+            {t("homePage.secondhero")}
           </h2>
 
-          {/* Main paragraph */}
           <p className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
-            Connecting companies in{" "}
+            {t("homePage.secondp1")}
             <span className="font-medium text-primary font-merriweather tracking-wider">
-              Romania
+              {t("homePage.romania")}
             </span>
             ,{" "}
             <span className="font-medium text-primary font-merriweather tracking-wider">
-              Malta
+              {t("homePage.malta")}
             </span>
-            , and{" "}
+            , {t("homePage.and")}{" "}
             <span className="font-medium text-primary font-merriweather tracking-wider">
-              Sharjah
+              {t("homePage.sharjah")}
             </span>{" "}
-            with highly skilled workers.
+            {t("homePage.secondp2")}
           </p>
 
-          {/* Highlighted secondary paragraph */}
           <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 max-w-2xl mx-auto">
             <p className="text-gray-700 italic font-light">
-              "We don't just fill positions, we support your growth with{" "}
-              <span className="font-medium text-secondary">ethical hiring</span>
+              "{t("homePage.secondnote1")}{" "}
+              <span className="font-medium text-secondary">
+                {t("homePage.importnote1")}
+              </span>
               ,{" "}
               <span className="font-medium text-secondary">
-                smooth processes
+                {t("homePage.importnote2")}
               </span>
-              , and{" "}
+              , {t("homePage.and")}{" "}
               <span className="font-medium text-secondary">
-                exceptional service
+                {t("homePage.importnote3")}
               </span>{" "}
-              from start to finish."
+              {t("homePage.importnote4")}"
             </p>
           </div>
 
-          {/* Stats/Features */}
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                title: "Countries Served",
-                value: "3+",
-                desc: "Romania, Malta, Sharjah",
+                title: t("homePage.texth1"),
+                value: t("homePage.text3"),
+                desc: t("homePage.textp1"),
               },
               {
-                title: "Focus Area",
-                value: "Ethical",
-                desc: "Responsible hiring practices",
+                title: t("homePage.texth2"),
+                value: t("homePage.texteh"),
+                desc: t("homePage.textp2"),
               },
               {
-                title: "Service",
-                value: "End-to-End",
-                desc: "From recruitment to onboarding",
+                title: t("homePage.texth3"),
+                value: t("homePage.texted"),
+                desc: t("homePage.textp3"),
               },
             ].map((item, index) => (
               <div

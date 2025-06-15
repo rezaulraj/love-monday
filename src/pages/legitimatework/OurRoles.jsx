@@ -8,40 +8,40 @@ import {
   FaHandshake,
   FaFileAlt,
 } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const OurRoles = () => {
+  const { t } = useTranslation();
   const services = [
     {
       icon: <FaFileAlt className="text-2xl text-indigo-600" />,
-      title: "Document Verification",
-      description:
-        "Complete collection and verification of all required documents",
+      title: t("legitimateWork.completerlh1"),
+      description: t("legitimateWork.completerlp1"),
     },
     {
       icon: <FaPassport className="text-2xl text-blue-500" />,
-      title: "Visa Assistance",
-      description: "End-to-end visa and work permit processing",
+      title: t("legitimateWork.completerlh2"),
+      description: t("legitimateWork.completerlp2"),
     },
     {
       icon: <FaUserTie className="text-2xl text-orange-500" />,
-      title: "Cultural Orientation",
-      description:
-        "Pre-departure training on local customs and workplace norms",
+      title: t("legitimateWork.completerlh3"),
+      description: t("legitimateWork.completerlp3"),
     },
     {
       icon: <FaGlobe className="text-2xl text-teal-500" />,
-      title: "Legal Education",
-      description: "Basic rights and responsibilities training",
+      title: t("legitimateWork.completerlh4"),
+      description: t("legitimateWork.completerlp4"),
     },
     {
       icon: <FaHandshake className="text-2xl text-green-500" />,
-      title: "Ongoing Support",
-      description: "Continuous consultation throughout employment",
+      title: t("legitimateWork.completerlh5"),
+      description: t("legitimateWork.completerlp5"),
     },
     {
       icon: <FaShieldAlt className="text-2xl text-purple-500" />,
-      title: "Compliance Checks",
-      description: "Regular verification of all legal requirements",
+      title: t("legitimateWork.completerlh6"),
+      description: t("legitimateWork.completerlp6"),
     },
   ];
 
@@ -51,7 +51,6 @@ const OurRoles = () => {
       className="py-20 bg-gradient-to-b from-gray-50 to-white"
     >
       <div className="container mx-auto px-4">
-        {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -60,22 +59,21 @@ const OurRoles = () => {
           className="max-w-4xl mx-auto text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 font-merriweather tracking-wider">
-            <span className="text-primary">Recruitment Assurance</span> and Our
-            Role
+            <span className="text-primary">
+              {t("legitimateWork.recutimentassh1")}
+            </span>{" "}
+            {t("legitimateWork.recutimentassh2")}
           </h2>
           <p className="text-xl text-gray-600 font-lato">
-            At{" "}
+            {t("legitimateWork.recutimentassp1")}
             <span className="font-semibold text-secondary font-merriweather tracking-wider">
-              Love Monday
+              {t("legitimateWork.recutimentassp2")}
             </span>
-            , we are committed to transparent, ethical, and compliant
-            recruitment for Romania, Malta, and Sharjah.
+            {t("legitimateWork.recutimentassp3")}
           </p>
         </motion.div>
 
-        {/* Two Column Layout */}
         <div className="flex flex-col lg:flex-row gap-12 max-w-6xl mx-auto">
-          {/* Left Column - Verification Info */}
           <motion.div
             className="lg:w-1/2"
             initial={{ opacity: 0, x: -20 }}
@@ -90,54 +88,42 @@ const OurRoles = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-gray-800 mb-2 font-merriweather tracking-wider">
-                    Verification & Accreditation
+                    {t("legitimateWork.verificationh")}
                   </h3>
                   <p className="text-gray-700">
-                    Employers and partners can verify recruitment approval and
-                    agency accreditation through official government portals in
-                    either the worker's country of origin or the destination
-                    country.
+                    {t("legitimateWork.verificationp")}
                   </p>
                 </div>
               </div>
 
               <div className="bg-blue-50 p-4 rounded-lg border border-blue-100 font-lato">
                 <p className="text-sm text-blue-800">
-                  These portals typically allow searches by:{" "}
-                  <span className="font-medium">job location</span> (e.g.
-                  Romania, Malta, Sharjah),{" "}
-                  <span className="font-medium">job title</span>,{" "}
-                  <span className="font-medium">
-                    licensed recruitment agency
-                  </span>
-                  , or <span className="font-medium">hiring company</span>.
+                  {t("legitimateWork.verificationnote")}
                 </p>
               </div>
             </div>
 
             <div className="bg-indigo-50 p-6 rounded-xl border border-indigo-100 font-lato">
               <h3 className="text-lg font-semibold text-indigo-800 mb-3 font-merriweather tracking-wider">
-                For official verification:
+                {t("legitimateWork.officialh")}
               </h3>
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start">
                   <span className="text-indigo-500 mr-2">•</span>
-                  Visit the consular or labor ministry websites for each
-                  location
+                  {t("legitimateWork.officiall1")}
                 </li>
                 <li className="flex items-start">
                   <span className="text-indigo-500 mr-2">•</span>
-                  Contact our compliance team for specific portal links
+                  {t("legitimateWork.officiall2")}
                 </li>
                 <li className="flex items-start">
                   <span className="text-indigo-500 mr-2">•</span>
-                  Request official accreditation documents directly from us
+                  {t("legitimateWork.officiall3")}
                 </li>
               </ul>
             </div>
           </motion.div>
 
-          {/* Right Column - Services */}
           <div className="lg:w-1/2">
             <motion.div
               initial={{ opacity: 0 }}
@@ -147,18 +133,20 @@ const OurRoles = () => {
             >
               <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 mb-8 font-lato">
                 <h3 className="text-2xl font-bold text-gray-800 mb-6 font-merriweather tracking-wider">
-                  Complete{" "}
-                  <span className="text-indigo-600">Recruitment Support</span>
+                  {t("legitimateWork.completerh1")}
+                  <span className="text-indigo-600">
+                    {t("legitimateWork.completerh2")}
+                  </span>
                 </h3>
                 <p className="text-gray-700 mb-6">
-                  As your trusted recruitment partner,{" "}
+                  {t("legitimateWork.completerp1")}
                   <span className="text-secondary font-merriweather tracking-wider pl-1">
-                    Love
+                    {t("legitimateWork.completerp2")}
                   </span>{" "}
-                  <span className="text-primary"> Monday</span> provides
-                  complete administrative and logistical support throughout the
-                  hiring journey. From initial compliance checks to final
-                  onboarding, we ensure a smooth and legal process.
+                  <span className="text-primary">
+                    {t("legitimateWork.completerp3")}
+                  </span>{" "}
+                  {t("legitimateWork.completerp4")}
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -190,24 +178,15 @@ const OurRoles = () => {
               <div className="bg-gradient-to-r from-primary to-blue-500 p-6 rounded-xl text-white font-lato">
                 <h3 className="text-xl font-semibold mb-3 flex items-center font-merriweather tracking-wider">
                   <FaGlobe className="mr-2" />
-                  Industry Leadership
+                  {t("legitimateWork.industrylh")}
                 </h3>
-                <p className="mb-4">
-                  As recognized industry leaders and active members of
-                  professional bodies, we contribute to global conversations on
-                  ethical workforce mobility.
-                </p>
-                <p>
-                  By aligning with evolving legal standards and best practices,
-                  we are raising the bar for responsible international
-                  recruitment.
-                </p>
+                <p className="mb-4">{t("legitimateWork.industryp1")}</p>
+                <p>{t("legitimateWork.industryp2")}</p>
               </div>
             </motion.div>
           </div>
         </div>
 
-        {/* CTA Section */}
         <motion.div
           className="mt-16 text-center"
           initial={{ opacity: 0 }}
@@ -222,7 +201,7 @@ const OurRoles = () => {
             }}
             className="px-8 py-3 bg-gradient-to-r from-secondary to-amber-500 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
           >
-            Contact Our Compliance Team
+            {t("legitimateWork.legitimateWorkbtn")}
           </button>
         </motion.div>
       </div>

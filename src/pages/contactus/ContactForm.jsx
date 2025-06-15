@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FiSend, FiCheck, FiInfo } from "react-icons/fi";
+import { useTranslation } from "react-i18next";
 
 const ContactForm = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     companyName: "",
     fullName: "",
@@ -44,7 +46,7 @@ const ContactForm = () => {
 
     requiredFields.forEach((field) => {
       if (!formData[field]) {
-        newErrors[field] = "This field is required";
+        newErrors[field] = t("contactUs.requirdfiled");
       }
     });
 
@@ -63,7 +65,6 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      // Form submission logic would go here
       console.log("Form submitted:", formData);
       setIsSubmitted(true);
     }
@@ -94,12 +95,10 @@ const ContactForm = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 font-merriweather tracking-wider">
-            Send an Inquiry
+            {t("contactUs.contactsubh")}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto font-lato">
-            Tell us about your staffing needs by filling out the short form
-            below. Our team will contact you promptly with a tailored proposal
-            that suits your business requirements.
+            {t("contactUs.contactshubp")}
           </p>
         </motion.div>
 
@@ -135,11 +134,15 @@ const ContactForm = () => {
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               {[
-                { label: "Company Name*", name: "companyName", type: "text" },
-                { label: "Full Name*", name: "fullName", type: "text" },
-                { label: "VAT (Company PIN)*", name: "vat", type: "text" },
-                { label: "Email Address*", name: "email", type: "email" },
-                { label: "Phone Number*", name: "phone", type: "tel" },
+                {
+                  label: t("contactUs.cName"),
+                  name: "companyName",
+                  type: "text",
+                },
+                { label: t("contactUs.fname"), name: "fullName", type: "text" },
+                { label: t("contactUs.vc"), name: "vat", type: "text" },
+                { label: t("contactUs.ea"), name: "email", type: "email" },
+                { label: t("contactUs.pnum"), name: "phone", type: "tel" },
               ].map((field, i) => (
                 <motion.div
                   key={field.name}
@@ -170,7 +173,7 @@ const ContactForm = () => {
 
             <motion.div custom={5} variants={inputVariants} className="mb-6">
               <label className="block text-sm font-medium text-gray-700 mb-1">
-                Do you currently employ foreign workers?*
+                {t("contactUs.fowo")}
               </label>
               <div className="flex space-x-4">
                 {["Yes", "No"].map((option) => (
@@ -196,18 +199,22 @@ const ContactForm = () => {
 
             {[
               {
-                label: "What position(s) do you need to fill?*",
+                label: t("contactUs.pofill"),
                 name: "positions",
                 type: "text",
               },
               {
-                label: "How many workers are required?*",
+                label: t("contactUs.mawork"),
                 name: "workersRequired",
                 type: "number",
               },
-              { label: "Work location*", name: "workLocation", type: "text" },
               {
-                label: "Additional comments or requirements",
+                label: t("contactUs.locat"),
+                name: "workLocation",
+                type: "text",
+              },
+              {
+                label: t("contactUs.addcomm"),
                 name: "comments",
                 type: "textarea",
               },
@@ -250,18 +257,15 @@ const ContactForm = () => {
 
             <motion.div custom={10} variants={inputVariants} className="mb-8">
               <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-4 font-lato">
-                <h4 className="font-bold text-blue-800 mb-2">Important:</h4>
-                <p className="text-blue-700">
-                  Businesses hiring international workers must provide:
-                </p>
+                <h4 className="font-bold text-blue-800 mb-2">
+                  {t("contactUs.impo")}:
+                </h4>
+                <p className="text-blue-700">{t("contactUs.impop")}</p>
                 <ul className="list-disc list-inside text-blue-700 space-y-1 mt-2 ">
-                  <li>Suitable accommodation</li>
-                  <li>Food or a food allowance</li>
-                  <li>Return airfare</li>
-                  <li>
-                    A signed employment contract compliant with destination
-                    country labor laws
-                  </li>
+                  <li>{t("contactUs.impol1")}</li>
+                  <li>{t("contactUs.impol2")}</li>
+                  <li>{t("contactUs.impol3")}</li>
+                  <li>{t("contactUs.impol4")}</li>
                 </ul>
               </div>
 
@@ -280,7 +284,7 @@ const ContactForm = () => {
                   htmlFor="conditions"
                   className="ml-2 block text-sm text-gray-700 font-lato"
                 >
-                  I accept the conditions above
+                  {t("contactUs.remop")}
                 </label>
               </div>
               {errors.acceptedConditions && (
@@ -300,7 +304,7 @@ const ContactForm = () => {
                 className="inline-flex items-center px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <FiSend className="mr-2 font-lato" />
-                Send Inquiry
+                {t("contactUs.conbtn")}
               </button>
             </motion.div>
           </motion.form>

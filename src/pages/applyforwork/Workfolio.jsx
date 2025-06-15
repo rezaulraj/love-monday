@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import work from "../../assets/images/work/work.jpg?url";
+import { useTranslation } from "react-i18next";
 
 const Workfolio = () => {
+  const { t } = useTranslation();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -42,28 +44,33 @@ const Workfolio = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
         >
-          {/* Text Content - Left Side */}
           <motion.div variants={textVariants} className="order-1 lg:order-1">
             <motion.h2
               variants={textVariants}
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 leading-tight font-merriweather tracking-wider"
             >
-              Apply to Work in <span className="text-primary">Romania</span>,{" "}
-              <span className="text-yellow-500">Malta</span>, or{" "}
-              <span className="text-secondary">Sharjah</span>
+              {t("applyForWork.appwoksubh1")}
+              <span className="text-primary">
+                {t("applyForWork.appwoksubh2")}
+              </span>
+              ,
+              <span className="text-yellow-500">
+                {t("applyForWork.appwoksubh3")}
+              </span>
+              , {t("applyForWork.appwoksubh4")}
+              <span className="text-secondary">
+                {t("applyForWork.appwoksubh5")}?
+              </span>
             </motion.h2>
 
             <motion.p
               variants={textVariants}
               className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed"
             >
-              Looking to work abroad in Romania, Malta, or Sharjah? Submit your
-              details to join our candidate database. Our team will contact you
-              to find the perfect position suited to your skills and experience.
+              {t("applyForWork.appwoksubp")}
             </motion.p>
           </motion.div>
 
-          {/* Image - Right Side */}
           <motion.div
             variants={imageVariants}
             className="order-2 lg:order-2 relative rounded-xl overflow-hidden shadow-2xl"
@@ -75,7 +82,6 @@ const Workfolio = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900/10 via-transparent to-transparent"></div>
 
-            {/* Country Flags Decoration */}
             <div className="absolute -bottom-4 -right-4 flex space-x-2">
               <div className="w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center">
                 <img

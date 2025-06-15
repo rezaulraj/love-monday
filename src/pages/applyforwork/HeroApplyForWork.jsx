@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import heroWorker from "../../assets/images/work/herowork.jpg?url";
+import { useTranslation } from "react-i18next";
 
 const HeroApplyForWork = () => {
+  const { t } = useTranslation();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -25,7 +27,6 @@ const HeroApplyForWork = () => {
 
   return (
     <section className="relative h-screen min-h-[700px] overflow-hidden">
-      {/* Background Image with Gradient Overlay */}
       <div className="absolute inset-0 z-0">
         <img
           src={heroWorker}
@@ -35,7 +36,6 @@ const HeroApplyForWork = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-gray-900/70 via-gray-900/40 to-transparent"></div>
       </div>
 
-      {/* Content Container */}
       <div className="relative z-10 h-full flex items-center">
         <motion.div
           initial="hidden"
@@ -46,26 +46,26 @@ const HeroApplyForWork = () => {
           <div className="max-w-2xl">
             <motion.div variants={itemVariants}>
               <span className="inline-block px-4 py-1.5 mb-4 text-sm font-semibold text-white bg-secondary rounded-full shadow-lg">
-                Career Opportunities
+                {t("applyForWork.appwokherotopb")}
               </span>
             </motion.div>
 
             <motion.h1
               variants={itemVariants}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight " 
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight "
             >
-              <span className="text-blue-400">Build Your Future</span>
+              <span className="text-blue-400">
+                {t("applyForWork.appwokheroh1")}
+              </span>
               <br />
-              With International Opportunities
+              {t("applyForWork.appwokheroh2")}
             </motion.h1>
 
             <motion.p
               variants={itemVariants}
               className="text-xl text-gray-200 mb-8 max-w-lg leading-relaxed"
             >
-              Join our network of skilled professionals working abroad in
-              Romania, Malta, and Sharjah. We connect talented workers with
-              rewarding international careers.
+              {t("applyForWork.appwokherop")}
             </motion.p>
 
             <motion.div
@@ -92,7 +92,7 @@ const HeroApplyForWork = () => {
                     d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                Apply Now
+                {t("applyForWork.appwokherobtn1")}
               </button>
               <button
                 onClick={() => {
@@ -114,13 +114,12 @@ const HeroApplyForWork = () => {
                     d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
                   />
                 </svg>
-                Learn More
+                {t("applyForWork.appwokherobtn2")}
               </button>
             </motion.div>
           </div>
         </motion.div>
 
-        {/* Decorative Elements */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.2 }}
