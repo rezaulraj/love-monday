@@ -6,6 +6,9 @@ import {
   FaFacebook,
   FaInstagram,
   FaYoutube,
+  FaPinterest,
+  FaTiktok,
+  FaTwitter,
 } from "react-icons/fa";
 import lovemonday from "/lovemonday.png?url";
 import { useTranslation } from "react-i18next";
@@ -24,28 +27,53 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.linkedin.com/company/love-monday-agency"
+                target="_blank"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <FaLinkedin className="text-2xl" />
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/lovemondayagency/"
+                target="_blank"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <FaFacebook className="text-2xl" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/lovemondayagency/"
+                target="_blank"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <FaInstagram className="text-2xl" />
               </a>
               <a
-                href="#"
+                href="https://www.youtube.com/@LoveMonday01"
+                target="_blank"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <FaYoutube className="text-2xl" />
+              </a>
+              <a
+                href="https://www.pinterest.com/lovemondayagency/"
+                target="_blank"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <FaPinterest className="text-2xl" />
+              </a>
+              <a
+                href="https://www.tiktok.com/@lovemonday25?lang=en"
+                target="_blank"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <FaTiktok className="text-2xl" />
+              </a>
+              <a
+                href="https://twitter.com/lovemonday_ag"
+                target="_blank"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <FaTwitter className="text-2xl" />
               </a>
             </div>
           </div>

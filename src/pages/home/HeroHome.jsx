@@ -36,7 +36,7 @@ const HeroHome = () => {
           className="w-full h-full object-cover"
         >
           <source
-            src="https://pinoy385.hr/Pinoy385_Web_4_EN.mp4"
+            src="https://res.cloudinary.com/dcsle5kwm/video/upload/v1750411716/LoveMonday_tfcjcj.mp4"
             type="video/mp4"
           />
           Your browser does not support the video tag.
